@@ -1,0 +1,31 @@
+<h1 [align]="'center'">New Employee</h1>
+<div mat-dialog-content>
+    <form [formGroup]='employeeForm' >       
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Matricule</mat-label>
+            <input formControlName='matricule' matInput placeholder="matricule" >
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Name</mat-label>
+            <input formControlName='name' matInput placeholder="name" >
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Role</mat-label>
+            <input formControlName='role' matInput placeholder="role" >
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="fill" >
+            <mat-label>Department</mat-label>
+            <mat-select formControlName='department'  name="Department" multiple>
+              <mat-option *ngFor="let department of departments" [value]="department.code">
+              {{department.code}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field> 
+          
+      </form>
+    </div>
+    <div mat-dialog-actions [align]="'end'">
+      <button mat-raised-button color="primary" (click)="addEmployee()" >{{Actionbtn}}</button>      
+      <button mat-raised-button color="warn" mat-dialog-close >Close</button>
+    </div>
+      

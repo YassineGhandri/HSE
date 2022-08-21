@@ -1,0 +1,32 @@
+<h1>New Department</h1>
+<div mat-dialog-content>
+    <form [formGroup]='departmentForm'  (submit)="addDep()">     
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Code</mat-label>
+            <input formControlName='code' matInput placeholder="code" >
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Name</mat-label>
+            <input formControlName='name' matInput placeholder="name" >
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Total Employees</mat-label>
+            <input formControlName='total_employee' matInput placeholder="total_employee" >
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Employee</mat-label>
+            <mat-select formControlName='employees'  name="employees" placeholder="employees" multiple>
+              <mat-option *ngFor="let employee of employees" [value]="employee.name">
+              {{employee.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+      </form>
+    </div>
+    <div mat-dialog-actions [align]="'end'">
+      <button type="submit" mat-raised-button color="primary" >save</button>      
+      <button  mat-raised-button color="warn" mat-dialog-close >Close</button>
+    </div>
+      
+
+ 

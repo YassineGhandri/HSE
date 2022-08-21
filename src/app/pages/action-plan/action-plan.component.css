@@ -1,0 +1,33 @@
+
+
+table {
+    width: 100%;
+  }
+  th{
+    width:20%;
+  }
+  .addbtn{
+    margin-top: 10px;
+    /*margin-left: 205px;*/
+    margin-bottom: 10px;
+  }
+  th{
+    background-color: rgb(237, 243, 243);
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  mat-drawer-content{
+    background-color: rgb(221, 223, 223);
+  } 
+  .sidebar{    
+    width: 18%;
+  }
+  
+  .content{
+    padding: 10px;
+    margin: 20px;
+    background-color: white;    
+  }
+  
+  
+  

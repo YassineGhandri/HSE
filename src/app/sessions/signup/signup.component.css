@@ -1,0 +1,32 @@
+.content{    
+  background-image: url("https://www.oo2.fr/sites/default/files/styles/large_16_9/public/images/2021/09/Politique%20HSE%20en%20entreprise.jpg?itok=KFKTMeQA");
+  background-size: cover;
+  background-size: 100%;
+  text-align: center;
+ padding-top: 20px;
+ height: 620px;
+}
+  .mat-form-field{
+    width: 90%;
+    background-color: white;
+    margin-top: 25px;
+  }
+  .signup{
+    width: 80%;
+    margin:0 auto; 
+    }
+    .card{
+      text-align: center;
+      display:block;
+      margin-top:10px;     
+      margin-left: auto;
+      margin-right: auto;
+      width: 30%;
+   
+      
+    }
+    button{
+     
+      margin:20px;
+      width: 80px;
+    }

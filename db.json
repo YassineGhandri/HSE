@@ -1,0 +1,595 @@
+{
+  "Risks": [
+    {
+      "title": "Fire",
+      "probability": "Occasionaly",
+      "severity": "Critical",
+      "rating": "5",
+      "comment": "Sulpfur fire produce exotic gas SO2 ",
+      "id": "002"
+    },
+    {
+      "title": "Explosion",
+      "probability": "Improbable",
+      "severity": "Catastrophic",
+      "rating": "3",
+      "comment": "it can be happen whit sulphur puverisation",
+      "id": "004"
+    },
+    {
+      "title": "Acid leackage",
+      "probability": "Frequent",
+      "severity": "Critical",
+      "rating": "4",
+      "comment": "all operations on acid circuit can create an acid leackage",
+      "id": "001"
+    },
+    {
+      "title": "Steam leack",
+      "probability": "Occasionaly",
+      "severity": "Moderate",
+      "rating": "3",
+      "comment": "it can cause a brun",
+      "id": "52WHuF7"
+    },
+    {
+      "title": "Gas Leack",
+      "probability": "Frequent",
+      "severity": "Critical",
+      "rating": "4",
+      "comment": "pb in respiration system",
+      "id": "h5sZmzo"
+    },
+    {
+      "title": "Hight pressure water leack",
+      "probability": "Occasionaly",
+      "severity": "Moderate",
+      "rating": "2",
+      "comment": "water pressure 40 bars",
+      "id": "_Jtt5j9"
+    },
+    {
+      "title": "Sulfur leack",
+      "probability": "Occasionaly",
+      "severity": "Critical",
+      "rating": "3",
+      "comment": "high pressure and temperature ",
+      "id": "TRcu9Jn"
+    },
+    {
+      "title": "shutdown",
+      "probability": "Frequent",
+      "severity": "Marginal",
+      "rating": "3",
+      "comment": "nn",
+      "id": "yFjhj1J"
+    }
+  ],
+  "risk_assessment": [
+    {
+      "responsible": "Moez Ezzine",
+      "assistant": "Yassine Ghandri",
+      "department": "Sulfurique",
+      "operation": "heat exchanger maitenance",
+      "risks": "Acid leackage",
+      "id": 1
+    },
+    {
+      "responsible": "Moez Ezzine",
+      "assistant": "Yassine Ghandri",
+      "department": "Sulfuric",
+      "operation": "Reactor maintenance",
+      "risks": "Gas Leack",
+      "id": 2
+    },
+    {
+      "responsible": "Med Ali Riahi",
+      "assistant": "Hajjej Hbib",
+      "department": "Sulfurique",
+      "operation": "Stack paint",
+      "risks": "Acid leackage",
+      "id": 3
+    },
+    {
+      "responsible": "Yassine Ghandri",
+      "assistant": "Yassine Ghandri",
+      "department": "production",
+      "operation": "lifting",
+      "risks": "shutdown",
+      "id": 4
+    }
+  ],
+  "employee": [
+    {
+      "matricule": "92486",
+      "name": "Moez Ezzine",
+      "role": "Chef Service",
+      "department": [
+        "Sulf-1&2"
+      ],
+      "id": 2
+    },
+    {
+      "matricule": "92664",
+      "name": "Yassine Ghandri",
+      "role": "Ingenieur",
+      "department": [
+        "Sulf-1&2"
+      ],
+      "id": 3
+    },
+    {
+      "matricule": "2582",
+      "name": "Med Ali Riahi",
+      "role": "Superviseur",
+      "department": [
+        "Sulf-1&2"
+      ],
+      "id": 4
+    },
+    {
+      "matricule": "3025",
+      "name": "Rahmani Abdelkarim",
+      "role": "Chef de poste",
+      "department": [
+        "Sulf-1&2"
+      ],
+      "id": 8
+    },
+    {
+      "matricule": "87455",
+      "name": "Elbach Naseur",
+      "role": "Operateur",
+      "department": [
+        "Sulf-1&2"
+      ],
+      "id": 12
+    },
+    {
+      "matricule": "91265",
+      "name": "Lotfi Dhaoudi",
+      "role": "Ouvrier",
+      "department": [
+        "Sulf-1&2"
+      ],
+      "id": 13
+    },
+    {
+      "matricule": "91266",
+      "name": "Belhsan Abdelhamid",
+      "role": "Operateur",
+      "department": [
+        "Sulf-1&2"
+      ],
+      "id": 14
+    },
+    {
+      "matricule": "92669",
+      "name": "oussama ben Ltaief",
+      "role": "engineer",
+      "department": [
+        "BM"
+      ],
+      "id": 20
+    },
+    {
+      "matricule": "2000",
+      "name": "khnissi",
+      "role": "superviseur",
+      "department": [
+        "BM"
+      ],
+      "id": 21
+    },
+    {
+      "matricule": "92690",
+      "name": "Anwar Mahfoudh",
+      "role": "engineer",
+      "department": [
+        "mécanique"
+      ],
+      "id": 22
+    },
+    {
+      "matricule": "92692",
+      "name": "khalil abdelmoulah",
+      "role": "Engineer",
+      "department": [
+        "Elec & instrum"
+      ],
+      "id": 24
+    },
+    {
+      "matricule": "2599",
+      "name": "Khalifa Turki",
+      "role": "Superviseur",
+      "department": [
+        "Elec & instrum"
+      ],
+      "id": 25
+    },
+    {
+      "matricule": "92693",
+      "name": "fathi Ghali",
+      "role": "Gestionnaire",
+      "department": [
+        "Env"
+      ],
+      "id": 26
+    },
+    {
+      "matricule": "92694",
+      "name": "Sami Marzougui",
+      "role": "Gestionnaire",
+      "department": [
+        "SAF"
+      ],
+      "id": 27
+    },
+    {
+      "matricule": "92695",
+      "name": "Mounir Belaydi",
+      "role": "engineer",
+      "department": [
+        "phos 3"
+      ],
+      "id": 28
+    },
+    {
+      "matricule": "92696",
+      "name": "elyes zarrouk",
+      "role": "engineer",
+      "department": [
+        "SULF 3"
+      ],
+      "id": 29
+    }
+  ],
+  "incident": [
+    {
+      "date": "2022-07-25T23:00:00.000Z",
+      "department": "Sulfurique 1&2",
+      "description": "operator dropdown during steam valve closing",
+      "reported_by": "Yassine Ghandri",
+      "injury": "Yes",
+      "TotalInjuries": 1,
+      "injuredEmployee": [
+        "Med Ali Riahi"
+      ],
+      "containmentLoss": "Yes",
+      "quantityLoss": "50",
+      "contaminatedEnvironment": "sea",
+      "materialLoss": "Yes",
+      "DamagedEquipment": "valve",
+      "EstimatedLoss": "",
+      "actionPlan": "AP-123",
+      "id": 1
+    },
+    {
+      "date": "2022-08-01T23:00:00.000Z",
+      "department": "GS",
+      "description": "acid leack",
+      "reported_by": "Yassine Ghandri",
+      "injury": "Yes",
+      "TotalInjuries": 1,
+      "injuredEmployee": "Elbach Naseur",
+      "containmentLoss": "Yes",
+      "quantityLoss": "1",
+      "contaminatedEnvironment": "earth",
+      "materialLoss": "Yes",
+      "DamagedEquipment": "Bac 2505",
+      "EstimatedLoss": 1500,
+      "actionPlan": "AP-008",
+      "id": 2
+    },
+    {
+      "date": "2022-08-04T23:00:00.000Z",
+      "department": "phos1",
+      "description": "sulfuric acid leack",
+      "reported_by": "Yassine Ghandri",
+      "injury": "Yes",
+      "TotalInjuries": 2,
+      "injuredEmployee": [
+        "Yassine Ghandri",
+        "Ben Mbarek NAji"
+      ],
+      "containmentLoss": "Yes",
+      "quantityLoss": "1000",
+      "contaminatedEnvironment": "sea",
+      "materialLoss": "Yes",
+      "DamagedEquipment": "Pump",
+      "EstimatedLoss": 2500,
+      "actionPlan": "AP-005",
+      "id": 3
+    },
+    {
+      "date": "2022-08-05T23:00:00.000Z",
+      "department": "phos1",
+      "description": "fire",
+      "reported_by": "Hajjej Hbib",
+      "injury": "Yes",
+      "TotalInjuries": 1,
+      "injuredEmployee": [
+        "Med Ali Riahi"
+      ],
+      "containmentLoss": "Yes",
+      "quantityLoss": "1000",
+      "contaminatedEnvironment": "sea",
+      "materialLoss": "Yes",
+      "DamagedEquipment": "voiture",
+      "EstimatedLoss": 2500,
+      "actionPlan": "AP-01",
+      "id": 4
+    }
+  ],
+  "permit_work": [
+    {
+      "reference": "PW-001/2022",
+      "type": "radio",
+      "object": "inspection TK2501",
+      "initiator": "Yassine Ghandri",
+      "startDate": "2022-08-01T23:00:00.000Z",
+      "risks": [
+        "Acid leackage",
+        "Gas Leack"
+      ],
+      "executors": [
+        "Alay Naceur",
+        "Rahmani Abdelkarim"
+      ],
+      "id": 4
+    },
+    {
+      "reference": "PW-002/2022",
+      "type": "cold",
+      "object": "Open absorption tower manhole",
+      "initiator": "Yassine Ghandri",
+      "startDate": "2022-08-02T23:00:00.000Z",
+      "risks": "Gas Leack",
+      "executors": "Hajjej Hbib",
+      "id": 5
+    },
+    {
+      "reference": "PW-003/2022",
+      "type": "hot",
+      "object": "Welding heat exchanger",
+      "initiator": "Yassine Ghandri",
+      "startDate": "2022-08-02T23:00:00.000Z",
+      "risks": "Acid leackage",
+      "executors": "Med Ali Riahi",
+      "id": 6
+    }
+  ],
+  "action_plan": [
+    {
+      "reference": "AP-123",
+      "responsible": "Moez Ezzine",
+      "corrective_actions": "Bridge Construction for steam valve",
+      "progress": "0%",
+      "id": 1
+    },
+    {
+      "reference": "AP-008",
+      "responsible": "Yassine Ghandri",
+      "corrective_actions": "Bac 2505 reparation",
+      "progress": "0%",
+      "id": 2
+    },
+    {
+      "reference": "AP-01",
+      "responsible": "Moez Ezzine",
+      "corrective_actions": "extingh",
+      "progress": "10%",
+      "id": 3
+    }
+  ],
+  "signupUser": [
+    {
+      "fullName": "admin",
+      "email": "admin@hse.com",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 3
+    }
+  ],
+  "departments": [
+    {
+      "code": "Sulf-1&2",
+      "name": "Sulfurique 1&2",
+      "total_employee": "18",
+      "employees": [
+        "Moez Ezzine",
+        "Yassine Ghandri",
+        "Med Ali Riahi",
+        "Hajjej Hbib",
+        "Saoudi Abdessalam",
+        "Alay Naceur",
+        "Rahmani Abdelkarim",
+        "Hattab Sahbi",
+        "Ghribi Walid",
+        "Fahmi Amara",
+        "Elbach Naseur",
+        "Lotfi Dhaoudi",
+        "Belhsan Abdelhamid",
+        "Ali Bouazza",
+        "Rezg Maher",
+        "Agoubi Nizar",
+        "Ben Mbarek NAji"
+      ],
+      "id": 1
+    },
+    {
+      "code": "BM",
+      "name": "Bureau de Methode",
+      "total_employee": "20",
+      "employees": [
+        "Oussama Ben Ltaief"
+      ],
+      "id": 2
+    },
+    {
+      "code": "phos1",
+      "name": "phosphorique 1",
+      "total_employee": "20",
+      "employees": [
+        "Alay Naceur"
+      ],
+      "id": 3
+    },
+    {
+      "code": "phos 2",
+      "name": "phosphorique 2",
+      "total_employee": "20",
+      "employees": [
+        "Saoudi Abdessalam"
+      ],
+      "id": 4
+    },
+    {
+      "code": "GS",
+      "name": "Gestion Soufre",
+      "total_employee": "50",
+      "employees": [
+        "Hajjej Hbib"
+      ],
+      "id": 5
+    },
+    {
+      "code": "SULF 3",
+      "name": "Sulfurique 3",
+      "total_employee": "15",
+      "employees": [
+        "Hajjej Hbib"
+      ],
+      "id": 6
+    },
+    {
+      "code": "phos 3",
+      "name": "phosphorique 3",
+      "total_employee": "20",
+      "employees": [
+        "Lotfi Dhaoudi"
+      ],
+      "id": 7
+    },
+    {
+      "code": "DCP",
+      "name": "Di-Calcuim de phosphate",
+      "total_employee": "10",
+      "employees": [
+        "Agoubi Nizar"
+      ],
+      "id": 8
+    },
+    {
+      "code": "util 1&2",
+      "name": "Utilité 1&2",
+      "total_employee": "12",
+      "employees": [
+        "Rezg Maher"
+      ],
+      "id": 9
+    },
+    {
+      "code": "util 3",
+      "name": "Utilité 3",
+      "total_employee": "10",
+      "employees": [
+        "Fahmi Amara"
+      ],
+      "id": 10
+    },
+    {
+      "code": "Elec & instrum",
+      "name": "Electrique et instrumentation",
+      "total_employee": "30",
+      "employees": [
+        "Ghribi Walid"
+      ],
+      "id": 11
+    },
+    {
+      "code": "mécanique",
+      "name": "mécanique",
+      "total_employee": "90",
+      "employees": [
+        "Belhsan Abdelhamid"
+      ],
+      "id": 12
+    },
+    {
+      "code": "SAF",
+      "name": "Service administratif",
+      "total_employee": "120",
+      "employees": [
+        "Hattab Sahbi"
+      ],
+      "id": 13
+    },
+    {
+      "code": "Env",
+      "name": "Service Envirennement",
+      "total_employee": "50",
+      "employees": [
+        "Rahmani Abdelkarim"
+      ],
+      "id": 14
+    }
+  ],
+  "trainings": [
+    {
+      "subject": "FIRE FIGHTING",
+      "validity": "2 years",
+      "necessity": "required For All",
+      "comment": "nn",
+      "id": 1
+    },
+    {
+      "subject": "FIRST AID EMERGENCY",
+      "validity": "2 years",
+      "necessity": "required For All",
+      "comment": "nn",
+      "id": 2
+    },
+    {
+      "subject": "ELECTRICAL HABILITY",
+      "validity": "2 years",
+      "necessity": "required For",
+      "department": [
+        "Elec & instrum"
+      ],
+      "comment": "nn",
+      "id": 4
+    },
+    {
+      "subject": "LIFTING ",
+      "validity": "1 year",
+      "necessity": "required For",
+      "department": [
+        "mécanique"
+      ],
+      "comment": "nn",
+      "id": 5
+    },
+    {
+      "subject": "SCAFOLDING",
+      "validity": "2 year",
+      "necessity": "required For",
+      "department": [
+        "mécanique"
+      ],
+      "comment": "nn",
+      "id": 6
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

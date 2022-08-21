@@ -1,0 +1,45 @@
+ <h1>New Risk Assessment</h1>
+
+<div mat-dialog-content>
+    <form [formGroup]='riskAssessmentForm' >
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Responsible</mat-label>
+          <mat-select formControlName='responsible' name="employee">
+              <mat-option *ngFor="let employee of employees" [value]="employee.name">
+              {{employee.name}}
+              </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Assistant</mat-label>
+            <mat-select formControlName='assistant' name="employee">
+              <mat-option *ngFor="let employee of employees" [value]="employee.name">
+              {{employee.name}}
+              </mat-option>
+            </mat-select>
+        </mat-form-field>        
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Department</mat-label>
+            <input formControlName='department' matInput placeholder="department" >
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Operation</mat-label>
+            <input formControlName='operation' matInput placeholder="operation" >
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Risks</mat-label>
+            <mat-select formControlName='risks' name="risk">
+              <mat-option *ngFor="let risk of risks" [value]="risk.title">
+              {{risk.title}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+         
+      </form>
+    </div>
+    <div mat-dialog-actions [align]="'end'">
+      <button mat-raised-button color="primary" (click)="addRiskAssessment()" >{{Actionbtn}}</button>      
+      <button mat-raised-button color="warn" mat-dialog-close >Close</button>
+    </div>
+      
+
