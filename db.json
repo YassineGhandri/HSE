@@ -390,6 +390,13 @@
       "password": "123456",
       "confirmPassword": "123456",
       "id": 3
+    },
+    {
+      "fullName": "yassine",
+      "email": "yassine@hse.com",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 4
     }
   ],
   "departments": [

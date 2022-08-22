@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from './material/material/material.module';
 import { PagesModule } from './pages/pages.module';
 import { SharedModule } from './shared/shared.module';
+import { SessionsModule } from './sessions/sessions.module';
 
 
 
@@ -26,12 +27,11 @@ import { SharedModule } from './shared/shared.module';
     AppRoutingModule,
     BrowserAnimationsModule,   
     ReactiveFormsModule, 
-    HttpClientModule,
-    HighchartsChartModule,
+    HttpClientModule,   
     RouterModule,  
-    MaterialModule,
-    PagesModule,
-    
+    MaterialModule,   
+    SessionsModule,
+    SharedModule
   ],
   providers: [
     

@@ -5,7 +5,7 @@ import { SignupComponent } from './signup/signup.component';
 import { MaterialModule } from '../material/material/material.module';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
-import { SharedModule } from '../shared/shared.module';
+
 
 
 @NgModule({
@@ -18,7 +18,12 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     MaterialModule,
     ReactiveFormsModule,
-    RouterModule,
-      ]
+    RouterModule.forChild([
+      { path: '', redirectTo: 'login', pathMatch: 'full' },  
+      {path:'login', component:LoginComponent},
+      {path:'signup', component:SignupComponent}
+    ]),   
+  ],
+  
 })
 export class SessionsModule { }

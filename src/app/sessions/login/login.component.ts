@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 loginForm!:FormGroup;
+   isLogged=false;
 
   constructor(private builderForm:FormBuilder,
     private http:HttpClient,
@@ -33,6 +34,7 @@ loginForm!:FormGroup;
       if(user){
        
         this.loginForm.reset();
+        this.isLogged=true;
         this.router.navigate(['dashboard']);
       }
       else{
