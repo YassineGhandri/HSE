@@ -41,35 +41,19 @@
       "id": "h5sZmzo"
     },
     {
-      "title": "Hight pressure water leack",
-      "probability": "Occasionaly",
-      "severity": "Moderate",
-      "rating": "2",
-      "comment": "water pressure 40 bars",
-      "id": "_Jtt5j9"
-    },
-    {
-      "title": "Sulfur leack",
-      "probability": "Occasionaly",
+      "title": "rrrr",
+      "probability": "Probably",
       "severity": "Critical",
       "rating": "3",
-      "comment": "high pressure and temperature ",
-      "id": "TRcu9Jn"
-    },
-    {
-      "title": "shutdown",
-      "probability": "Frequent",
-      "severity": "Marginal",
-      "rating": "3",
       "comment": "nn",
-      "id": "yFjhj1J"
+      "id": "yhQfvqt"
     }
   ],
   "risk_assessment": [
     {
       "responsible": "Moez Ezzine",
       "assistant": "Yassine Ghandri",
-      "department": "Sulfurique",
+      "department": "Sulfuric",
       "operation": "heat exchanger maitenance",
       "risks": "Acid leackage",
       "id": 1
@@ -85,7 +69,7 @@
     {
       "responsible": "Med Ali Riahi",
       "assistant": "Hajjej Hbib",
-      "department": "Sulfurique",
+      "department": "Sulfuric",
       "operation": "Stack paint",
       "risks": "Acid leackage",
       "id": 3
@@ -397,6 +381,13 @@
       "password": "123456",
       "confirmPassword": "123456",
       "id": 4
+    },
+    {
+      "fullName": "moez",
+      "email": "moez@hse.com",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 5
     }
   ],
   "departments": [

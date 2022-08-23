@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { RiskRoutingModule } from './risk-routing.module';
 import { RiskComponent } from './risk.component';
 import { RiskDialogComponent } from './risk-dialog/risk-dialog.component';
 import { MaterialModule } from 'src/app/material/material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RiskService } from './risk.service';
+import { RouterModule } from '@angular/router';
+
 
 
 @NgModule({
@@ -16,12 +15,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     RiskComponent
   ],
   imports: [
-    CommonModule,
-    RiskRoutingModule,
+    CommonModule,    
     MaterialModule,
     ReactiveFormsModule,
-    BrowserModule,
-    BrowserAnimationsModule
-  ]
+    RouterModule.forChild([       
+      { path: 'risk', component: RiskComponent },      
+    ]),
+      
+    
+  ],
+  providers:[RiskService]
 })
 export class RiskModule { }

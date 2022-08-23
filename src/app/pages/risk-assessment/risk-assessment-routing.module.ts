@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+/*import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { RiskAssessmentComponent } from './risk-assessment.component';
 
@@ -8,4 +8,4 @@ const routes: Routes = [{ path: '', component: RiskAssessmentComponent }];
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class RiskAssessmentRoutingModule { }
+export class RiskAssessmentRoutingModule { }*/

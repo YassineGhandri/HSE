@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+/*import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PermitWorkComponent } from './permit-work.component';
 
@@ -8,4 +8,4 @@ const routes: Routes = [{ path: '', component: PermitWorkComponent }];
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class PermitWorkRoutingModule {}
+export class PermitWorkRoutingModule {}*/

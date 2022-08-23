@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 
 @Component({
@@ -15,7 +16,8 @@ loginForm!:FormGroup;
 
   constructor(private builderForm:FormBuilder,
     private http:HttpClient,
-    private router:Router) { }
+    private router:Router,
+    private authService:AuthService) { }
 
   ngOnInit(): void {
     this.loginForm=this.builderForm.group({
@@ -26,16 +28,14 @@ loginForm!:FormGroup;
 
   }
   login(){
-    this.http.get<any>('http://localhost:3000/signupUser')
-    .subscribe(res=>{
+    this.authService.getUser().subscribe(res=>{
       const user=res.find((a:any)=>{
         return a.email===this.loginForm.value.email && a.password===this.loginForm.value.password
       });
       if(user){
        
-        this.loginForm.reset();
-        this.isLogged=true;
-        this.router.navigate(['dashboard']);
+        this.loginForm.reset();       
+        this.router.navigate(['home']);
       }
       else{
         alert('user not found');

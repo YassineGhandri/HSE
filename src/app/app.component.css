@@ -28,10 +28,10 @@
 
 a {
   text-decoration: none;
-  color:rgb(26, 25, 25);
+  color:white;
 }
 a:hover {
-  color: white;
+  color: rgb(128, 115, 0);
 }
 
 img
@@ -41,4 +41,7 @@ img
 }
 .sign{
   font-size: 20px;
+}
+.matMenuItem>a{
+  color: black;
 }

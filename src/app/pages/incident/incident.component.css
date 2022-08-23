@@ -1,38 +1,28 @@
 .addbtn{
-    margin-top: 10px;    
-    margin-bottom: 10px;
-    background-color:rgb(230, 57, 34) ;
-  }  
-  .mat-form-field {
-    font-size: 14px;
-    width: 100%;
-  }  
-  td, th {
-    width: 10%;
-  }  
-  .description{
-    width: 30%;   
-  } 
-  
-  th{
-    background-color: rgb(237, 243, 243);
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-  mat-drawer-content{
-    background-color: rgb(221, 223, 223);
-  } 
-  .sidebar{    
-    width: 18%;
-  }
-  
-  .content{
-    padding: 10px;
-    margin: 20px;
-    background-color: white;  
-    padding-bottom: 100px;  
-  }
-  
-  
-  
-  
+  margin-top: 10px;   
+  margin-bottom: 10px;
+  background-color: red;
+}   
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}  
+td, th {
+  width: 10%;
+} 
+th{
+  background-color: rgb(237, 243, 243);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+mat-drawer-content{
+  background-color: rgb(221, 223, 223);
+} 
+.sidebar{    
+  width: 18%;
+} 
+.content{
+  padding: 10px;
+  margin: 20px;
+  background-color: white;    
+}

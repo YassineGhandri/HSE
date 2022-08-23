@@ -11,14 +11,14 @@
           <button mat-button class="item"><a [routerLink]="['./shared/about']">About</a></button>
           <button mat-button [matMenuTriggerFor]="beforeMenu" class="item">Features</button>
           <mat-menu #beforeMenu="matMenu" xPosition="before">
-            <button mat-menu-item>risks study</button>
-            <button mat-menu-item>risks Assessments</button>
-            <button mat-menu-item>incidents management</button>
-            <button mat-menu-item>permit work system</button>
-            <button mat-menu-item>Action plans</button>
-            <button mat-menu-item>trainings</button>
+            <button mat-menu-item class="matMenuItem"><a [routerLink]="['./pages/risk/']">risks study</a> </button>
+            <button mat-menu-item class="matMenuItem"><a [routerLink]="['./pages/risk_assessment/']">risks Assessments</a></button>
+            <button mat-menu-item class="matMenuItem"><a [routerLink]="['./pages/incident/']">incidents management</a></button>
+            <button mat-menu-item class="matMenuItem"><a [routerLink]="['./pages/permit_work/']">permit work system</a></button>
+            <button mat-menu-item class="matMenuItem"><a [routerLink]="['./pages/action_plan/']">Action plans</a></button>
+            <button mat-menu-item class="matMenuItem"><a [routerLink]="['./pages/trainings/']">trainings</a></button>
           </mat-menu>
-          <button mat-button class="item">Documentations</button>
+          <button mat-button class="item"><a [routerLink]="['./pages/page']">Documentations</a></button>
         </div>
         <div class="access">
           <img
