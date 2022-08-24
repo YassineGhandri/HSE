@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from './material/material/material.module';
 import { SharedModule } from './shared/shared.module';
 import { SessionsModule } from './sessions/sessions.module';
-import { PagesRoutingModule } from './pages/pages-routing.module';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +28,7 @@ import { PagesRoutingModule } from './pages/pages-routing.module';
     MaterialModule,   
     SessionsModule,
     SharedModule,
-    PagesRoutingModule
+   
   ],
   providers: [
     

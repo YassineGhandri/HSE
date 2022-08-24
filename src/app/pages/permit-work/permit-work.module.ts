@@ -5,6 +5,7 @@ import { MaterialModule } from 'src/app/material/material/material.module';
 import { PermitWorkDialogComponent } from './permit-work-dialog/permit-work-dialog.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { PermitWorkRoutingModule } from './permit-work-routing.module';
 
 
 @NgModule({
@@ -16,10 +17,7 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     MaterialModule,
     ReactiveFormsModule,
-    RouterModule.forChild([
-      { path: 'permit_work', component: PermitWorkComponent },     
-    ]),
-    
+    PermitWorkRoutingModule   
     
   ]
 })

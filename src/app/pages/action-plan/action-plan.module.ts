@@ -5,6 +5,7 @@ import { ActionPlanDialogComponent } from './action-plan-dialog/action-plan-dial
 import { MaterialModule } from 'src/app/material/material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { ActionPlanRoutingModule } from './action-plan-routing.module';
 
 
 
@@ -17,10 +18,7 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     MaterialModule,
     ReactiveFormsModule,  
-    RouterModule.forChild([
-      { path: 'action_plan', component: ActionPlanComponent },     
-    ]),
-     
+    ActionPlanRoutingModule       
     
   ]
 })

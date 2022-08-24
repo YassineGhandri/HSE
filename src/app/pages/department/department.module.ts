@@ -5,6 +5,7 @@ import { DepartmentDialogComponent } from './department-dialog/department-dialog
 import { MaterialModule } from 'src/app/material/material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { DepartmentRoutingModule } from './department-routing.module';
 
 
 @NgModule({
@@ -16,11 +17,7 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     MaterialModule,
     ReactiveFormsModule,
-    RouterModule.forChild([
-      { path: 'department', component: DepartmentComponent },     
-    ]),   
-  
-    
+    DepartmentRoutingModule
   ]
 })
 export class DepartmentModule { }

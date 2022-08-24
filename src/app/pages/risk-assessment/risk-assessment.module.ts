@@ -5,6 +5,7 @@ import { MaterialModule } from 'src/app/material/material/material.module';
 import { RiskAssessmentDialogComponent } from './risk-assessment-dialog/risk-assessment-dialog.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { RiskAssessmentRoutingModule } from './risk-assessment-routing.module';
 
 
 @NgModule({
@@ -16,9 +17,7 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     MaterialModule,
     ReactiveFormsModule,
-    RouterModule.forChild([
-      { path: 'risk_assessment', component: RiskAssessmentComponent },     
-    ]),
+    RiskAssessmentRoutingModule   
   
   ]
 })

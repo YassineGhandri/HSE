@@ -5,6 +5,7 @@ import { IncidentDialogComponent } from './incident-dialog/incident-dialog.compo
 import { MaterialModule } from 'src/app/material/material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { IncidentRoutingModule } from './incident-routing.module';
 
 
 @NgModule({
@@ -16,10 +17,7 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     MaterialModule,
     ReactiveFormsModule,
-    RouterModule.forChild([
-      { path: 'incident', component: IncidentComponent },     
-    ]),
-    
+    IncidentRoutingModule
    
   ]
 })

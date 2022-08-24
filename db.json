@@ -251,7 +251,7 @@
     },
     {
       "date": "2022-08-01T23:00:00.000Z",
-      "department": "GS",
+      "department": "SULF 3",
       "description": "acid leack",
       "reported_by": "Yassine Ghandri",
       "injury": "Yes",
@@ -367,7 +367,7 @@
       "id": 3
     }
   ],
-  "signupUser": [
+  "user": [
     {
       "fullName": "admin",
       "email": "admin@hse.com",
@@ -537,21 +537,23 @@
   "trainings": [
     {
       "subject": "FIRE FIGHTING",
-      "validity": "2 years",
+      "validity": "2 ",
       "necessity": "required For All",
+      "department": "",
       "comment": "nn",
       "id": 1
     },
     {
       "subject": "FIRST AID EMERGENCY",
-      "validity": "2 years",
+      "validity": "2 ",
       "necessity": "required For All",
+      "department": "",
       "comment": "nn",
       "id": 2
     },
     {
       "subject": "ELECTRICAL HABILITY",
-      "validity": "2 years",
+      "validity": "2 ",
       "necessity": "required For",
       "department": [
         "Elec & instrum"
@@ -561,7 +563,7 @@
     },
     {
       "subject": "LIFTING ",
-      "validity": "1 year",
+      "validity": "1 ",
       "necessity": "required For",
       "department": [
         "mécanique"
@@ -571,7 +573,7 @@
     },
     {
       "subject": "SCAFOLDING",
-      "validity": "2 year",
+      "validity": "2 ",
       "necessity": "required For",
       "department": [
         "mécanique"

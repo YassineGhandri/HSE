@@ -6,6 +6,7 @@ import { TrainingSessionComponent } from './training-session/training-session.co
 import { MaterialModule } from 'src/app/material/material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { TrainingRoutingModule } from './training-routing.module';
 
 @NgModule({
   declarations: [
@@ -17,10 +18,8 @@ import { RouterModule } from '@angular/router';
     CommonModule,   
     MaterialModule,
     ReactiveFormsModule,
-    RouterModule.forChild([
-      { path: 'trainings', component: TrainingComponent },
-      { path: 'training_sessions', component: TrainingSessionComponent },
-    ]),
+    TrainingRoutingModule
+    
   ],
 })
 export class TrainingModule {}

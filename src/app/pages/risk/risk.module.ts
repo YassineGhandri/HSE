@@ -6,6 +6,7 @@ import { MaterialModule } from 'src/app/material/material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RiskService } from './risk.service';
 import { RouterModule } from '@angular/router';
+import { RiskRoutingModule } from './risk-routing.module';
 
 
 
@@ -18,10 +19,7 @@ import { RouterModule } from '@angular/router';
     CommonModule,    
     MaterialModule,
     ReactiveFormsModule,
-    RouterModule.forChild([       
-      { path: 'risk', component: RiskComponent },      
-    ]),
-      
+    RiskRoutingModule
     
   ],
   providers:[RiskService]

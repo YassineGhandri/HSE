@@ -1,11 +1,12 @@
-/*import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PermitWorkComponent } from './permit-work.component';
 
-const routes: Routes = [{ path: '', component: PermitWorkComponent }];
+const routes: Routes = [{ path: 'permit_work', component: PermitWorkComponent }];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [
+     RouterModule.forChild(routes),],
   exports: [RouterModule],
 })
-export class PermitWorkRoutingModule {}*/
+export class PermitWorkRoutingModule {}

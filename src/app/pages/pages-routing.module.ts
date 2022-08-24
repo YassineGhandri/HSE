@@ -1,24 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PagesComponent } from './pages.component';
+import { RiskModule } from './risk/risk.module';
 
 const routes: Routes = [
-  { path: 'page', component: PagesComponent,
-  /*children:[
+  { path: '', component: PagesComponent,
+  children:[
     {
-      path: 'risk',
+      path: '',
       loadChildren: () =>
         import('./risk/risk.module').then((m) => m.RiskModule),
     },
     {
-      path: 'actionPlan',
+      path: '',
       loadChildren: () =>
         import('./action-plan/action-plan.module').then(
           (m) => m.ActionPlanModule
         ),
     },
     {
-      path: 'riskAssessment',
+      path: '',
       loadChildren: () =>
         import('./risk-assessment/risk-assessment.module').then(
           (m) => m.RiskAssessmentModule
@@ -32,40 +33,35 @@ const routes: Routes = [
         ),
     },
     {
-      path: 'incident',
+      path: '',
       loadChildren: () =>
         import('./incident/incident.module').then(
           (m) => m.IncidentModule
         ),
     },
     {
-      path: 'permitWork',
+      path: '',
       loadChildren: () =>
         import('./permit-work/permit-work.module').then(
           (m) => m.PermitWorkModule
         ),
     },
     {
-      path: 'training',
+      path: '',
       loadChildren: () =>
         import('./training/training.module').then(
           (m) => m.TrainingModule
         ),
     },
     {
-      path: 'department',
+      path: '',
       loadChildren: () =>
         import('./department/department.module').then(
           (m) => m.DepartmentModule
         ),
-    },
-  ]*/
- 
-  
-  
-},
-  ];
-
+    },]},
+    
+  ]  
 
 @NgModule({
   imports: [
