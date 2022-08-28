@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PagesComponent } from './pages.component';
-import { RiskModule } from './risk/risk.module';
 
 const routes: Routes = [
   { path: '', component: PagesComponent,
   children:[
+    {
+      path: '',
+      loadChildren: () =>
+        import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
+    },
     {
       path: '',
       loadChildren: () =>
@@ -59,7 +63,22 @@ const routes: Routes = [
         import('./department/department.module').then(
           (m) => m.DepartmentModule
         ),
-    },]},
+    },
+    {
+      path: '',
+      loadChildren: () =>
+        import('./ipe/ipe.module').then(
+          (m) => m.IPEModule
+        ),
+    },
+    {
+      path: '',
+      loadChildren: () =>
+        import('./operational-tools/operational-tools.module').then(
+          (m) => m.OperationalToolsModule
+        ),
+    },
+    ]},
     
   ]  
 

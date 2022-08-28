@@ -39,14 +39,6 @@
       "rating": "4",
       "comment": "pb in respiration system",
       "id": "h5sZmzo"
-    },
-    {
-      "title": "rrrr",
-      "probability": "Probably",
-      "severity": "Critical",
-      "rating": "3",
-      "comment": "nn",
-      "id": "yhQfvqt"
     }
   ],
   "risk_assessment": [
@@ -582,6 +574,15 @@
       "id": 6
     }
   ],
+  "IPE": [
+    {
+      "type": "Glove",
+      "code": "1",
+      "description": "1",
+      "id": 1
+    }
+  ],
+  "operationalTools": [],
   "comments": [
     {
       "id": 1,

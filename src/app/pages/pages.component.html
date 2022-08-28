@@ -8,26 +8,34 @@
         </div>
         <ul >
             <li class="featureItem">
-                <button mat-button><a [routerLink]="['risk']">Risks study</a></button>
+                <button mat-button><a [routerLink]="['risk']"><mat-icon>add_alert</mat-icon> Risks study</a></button>
                 
             </li>
             <li class="featureItem">
-                <button mat-button><a [routerLink]="['risk_assessment']">Risks Assessments</a></button>
+                <button mat-button><a [routerLink]="['risk_assessment']"><mat-icon> traffic</mat-icon> Risks Assessments</a></button>
             </li>
             <li class="featureItem">
-                <button mat-button><a [routerLink]="['incident']"> Incidents management</a></button>
+                <button mat-button><a [routerLink]="['incident']">	<mat-icon> local_car_wash</mat-icon> Incidents management</a></button>
                 
             </li>
             <li class="featureItem">
-                <button mat-button><a [routerLink]="['permit_work']"><i class="fal fa-chart-user fa-2x text-primary mb-4"></i> Permit work system</a></button>
+                <button mat-button><a [routerLink]="['permit_work']"><mat-icon>playlist_add_check</mat-icon> Permit work system</a></button>
                 
             </li>
             <li class="featureItem">
-                <button mat-button><a [routerLink]="['action_plan']"> Action plans</a></button>
+                <button mat-button><a [routerLink]="['action_plan']"><mat-icon> attach_file</mat-icon> Action plans</a></button>
                 
             </li>
             <li class="featureItem">
-                <button mat-button><a [routerLink]="['trainings']"> Trainings</a></button>
+                <button mat-button><a [routerLink]="['ipe']"><mat-icon>supervised_user_circle</mat-icon> IPE Management</a></button>
+                
+            </li>
+            <li class="featureItem">
+                <button mat-button><a [routerLink]="['operational_tools']"><mat-icon>supervised_user_circle</mat-icon> Operational Tools</a></button>
+                
+            </li>           
+            <li class="featureItem">
+                <button mat-button><a [routerLink]="['trainings']"><mat-icon>supervised_user_circle</mat-icon> Trainings</a></button>
                 
             </li>
         </ul>
