@@ -12,6 +12,7 @@ import { SharedModule } from './shared/shared.module';
 import { SessionsModule } from './sessions/sessions.module';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +29,7 @@ import { SessionsModule } from './sessions/sessions.module';
     MaterialModule,   
     SessionsModule,
     SharedModule,
+  
    
   ],
   providers: [

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StoreMVTComponent } from './store-mvt.component';
+import { StopCardDialogComponent } from './stop-card-dialog.component';
 
-describe('StoreMVTComponent', () => {
-  let component: StoreMVTComponent;
-  let fixture: ComponentFixture<StoreMVTComponent>;
+describe('StopCardDialogComponent', () => {
+  let component: StopCardDialogComponent;
+  let fixture: ComponentFixture<StopCardDialogComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StoreMVTComponent ]
+      declarations: [ StopCardDialogComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(StoreMVTComponent);
+    fixture = TestBed.createComponent(StopCardDialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

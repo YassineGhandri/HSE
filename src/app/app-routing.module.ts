@@ -21,9 +21,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/pages.module').then((m) => PagesModule),
   },
-  { path: 'dashboard', loadChildren: () => import('./pages/dashboard/dashboard.module').then(m => m.DashboardModule) },
-  { path: 'IPE', loadChildren: () => import('./pages/ipe/ipe.module').then(m => m.IPEModule) },
-  { path: 'operationalTools', loadChildren: () => import('./pages/operational-tools/operational-tools.module').then(m => m.OperationalToolsModule) },
+  
 
   
 ];

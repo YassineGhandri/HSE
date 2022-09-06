@@ -577,12 +577,58 @@
   "IPE": [
     {
       "type": "Glove",
-      "code": "1",
-      "description": "1",
+      "code": "001",
+      "description": "none",
       "id": 1
+    },
+    {
+      "type": "Helmet",
+      "code": "002",
+      "description": "nn",
+      "id": 2
+    },
+    {
+      "type": "Mask",
+      "code": "003",
+      "description": "nn",
+      "id": 3
+    },
+    {
+      "type": "Shoes",
+      "code": "004",
+      "description": "nn",
+      "id": 4
     }
   ],
-  "operationalTools": [],
+  "RIRS": [
+    {
+      "date": "2022-09-05T23:00:00.000Z",
+      "site": "U2500",
+      "initiator": "Med Ali Riahi",
+      "priority": "B",
+      "description": "nn",
+      "id": 2
+    },
+    {
+      "date": "2022-09-05T23:00:00.000Z",
+      "site": "U500",
+      "initiator": "Rahmani Abdelkarim",
+      "priority": "A",
+      "description": "nn",
+      "id": 3
+    },
+    {
+      "status": "new",
+      "date": "2022-09-05T23:00:00.000Z",
+      "site": "u500",
+      "initiator": "Moez Ezzine",
+      "priority": "A",
+      "description": "nn",
+      "id": 4
+    }
+  ],
+  "MWA": [],
+  "stop_card": [],
   "comments": [
     {
       "id": 1,

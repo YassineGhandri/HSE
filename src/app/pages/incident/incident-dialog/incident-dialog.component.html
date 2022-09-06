@@ -1,100 +1,163 @@
 <h1 [align]="'center'">New Incident Notification</h1>
-<div mat-dialog-content> 
-   
-    <form [formGroup]='incidentForm'  >  
-        <div [align]="'center'">     
-        <mat-form-field appearance="outline">
-            <mat-label>date</mat-label>
-            <input matInput [matDatepicker]="picker" formControlName='date'>     
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>   
-          </mat-form-field> 
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>department</mat-label>
-            <mat-select formControlName='department'  name="department">
-              <mat-option *ngFor="let department of departments" [value]="department.code">
-              {{department.code}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>description</mat-label>
-            <input formControlName='description'  matInput placeholder="description" >
-          </mat-form-field>
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>reported_by</mat-label>
-            <mat-select formControlName='reported_by'  name="employee">
-              <mat-option *ngFor="let employee of employees" [value]="employee.name">
-              {{employee.name}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>injury</mat-label>
-            <mat-select  formControlName='injury' [(value)]="injuryValue">
-              <mat-option value="Yes">Yes</mat-option>
-              <mat-option value="No">No</mat-option>
-            </mat-select>
-          </mat-form-field>
-          <mat-form-field class="example-full-width" appearance="fill" *ngIf="injuryValue==='Yes'">
-            <mat-label>Total Injuries</mat-label>
-            <input formControlName='TotalInjuries' matInput type="number" placeholder="Ex. 12">
-          </mat-form-field>
-          <mat-form-field class="example-full-width" appearance="fill" *ngIf="injuryValue==='Yes'">
-            <mat-label>injured Employee</mat-label>
-            <mat-select formControlName='injuredEmployee'  name="employee" multiple>
-              <mat-option *ngFor="let employee of employees" [value]="employee.name">
-              {{employee.name}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-        </div> 
-        <div [align]="'center'">
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>containment Loss</mat-label>
-            <mat-select formControlName="containmentLoss" [(value)]="containmentValue">
-              <mat-option value="Yes">Yes</mat-option>
-              <mat-option value="No">No</mat-option>
-            </mat-select>
-          </mat-form-field>
-          <mat-form-field class="example-full-width" appearance="fill" *ngIf="containmentValue==='Yes'">
-            <mat-label>quantity Loss</mat-label>
-            <input formControlName="quantityLoss"  matInput placeholder="quantityLoss" >
-          </mat-form-field>          
-          <mat-form-field class="example-full-width" appearance="fill" *ngIf="containmentValue==='Yes'">
-            <mat-label>contaminated Environment</mat-label>
-            <mat-select formControlName="contaminatedEnvironment">
-              <mat-option value="earth">Earth</mat-option>
-              <mat-option value="sea">Sea</mat-option>              
-              <mat-option value="air">Air</mat-option>
-            </mat-select>
-          </mat-form-field>            
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>material Loss</mat-label>
-            <mat-select formControlName="materialLoss" [(value)]="materialValue">
-              <mat-option value="Yes">Yes</mat-option>
-              <mat-option value="No">No</mat-option>
-            </mat-select>
-          </mat-form-field>
-          <mat-form-field class="example-full-width" appearance="fill" *ngIf="materialValue==='Yes'">
-            <mat-label>Damaged Equipment</mat-label>
-            <input formControlName="DamagedEquipment" matInput placeholder="damagedEquipment" >
-          </mat-form-field>
-          <mat-form-field class="example-full-width" appearance="fill" *ngIf="materialValue==='Yes'">
-            <mat-label>Estimated Loss</mat-label>
-            <input formControlName="EstimatedLoss" matInput type="number" class="example-right-align" placeholder="0">
-            <span matPrefix>$&nbsp;</span>
-            <span matSuffix>.00</span>
-          </mat-form-field>
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Action Plan</mat-label>
-            <input formControlName="actionPlan" matInput placeholder="actionPlanId" >
-          </mat-form-field>
-        </div>
-      </form>
+<div mat-dialog-content>
+  <form [formGroup]="incidentForm">
+    <div [align]="'center'">
+      <mat-form-field appearance="outline">
+        <mat-label>date</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="date" />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>department</mat-label>
+        <mat-select formControlName="department" name="department">
+          <mat-option
+            *ngFor="let department of departments"
+            [value]="department.code"
+          >
+            {{ department.code }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>description</mat-label>
+        <input
+          formControlName="description"
+          matInput
+          placeholder="description"
+        />
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>reported_by</mat-label>
+        <mat-select formControlName="reported_by" name="employee">
+          <mat-option
+            *ngFor="let employee of employees"
+            [value]="employee.name"
+          >
+            {{ employee.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>injury</mat-label>
+        <mat-select formControlName="injury" [(value)]="injuryValue">
+          <mat-option value="Yes">Yes</mat-option>
+          <mat-option value="No">No</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field
+        class="example-full-width"
+        appearance="fill"
+        *ngIf="injuryValue === 'Yes'"
+      >
+        <mat-label>Total Injuries</mat-label>
+        <input
+          formControlName="TotalInjuries"
+          matInput
+          type="number"
+          placeholder="Ex. 12"
+        />
+      </mat-form-field>
+      <mat-form-field
+        class="example-full-width"
+        appearance="fill"
+        *ngIf="injuryValue === 'Yes'"
+      >
+        <mat-label>injured Employee</mat-label>
+        <mat-select formControlName="injuredEmployee" name="employee" multiple>
+          <mat-option
+            *ngFor="let employee of employees"
+            [value]="employee.name"
+          >
+            {{ employee.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
     </div>
-    <div mat-dialog-actions [align]="'end'">
-      <button mat-raised-button color="primary" (click)="addIncident()">{{Actionbtn}}</button>      
-      <button mat-raised-button color="warn" mat-dialog-close >Close</button>
+    <div [align]="'center'">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>containment Loss</mat-label>
+        <mat-select
+          formControlName="containmentLoss"
+          [(value)]="containmentValue"
+        >
+          <mat-option value="Yes">Yes</mat-option>
+          <mat-option value="No">No</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field
+        class="example-full-width"
+        appearance="fill"
+        *ngIf="containmentValue === 'Yes'"
+      >
+        <mat-label>quantity Loss</mat-label>
+        <input
+          formControlName="quantityLoss"
+          matInput
+          placeholder="quantityLoss"
+        />
+      </mat-form-field>
+      <mat-form-field
+        class="example-full-width"
+        appearance="fill"
+        *ngIf="containmentValue === 'Yes'"
+      >
+        <mat-label>contaminated Environment</mat-label>
+        <mat-select formControlName="contaminatedEnvironment">
+          <mat-option value="earth">Earth</mat-option>
+          <mat-option value="sea">Sea</mat-option>
+          <mat-option value="air">Air</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>material Loss</mat-label>
+        <mat-select formControlName="materialLoss" [(value)]="materialValue">
+          <mat-option value="Yes">Yes</mat-option>
+          <mat-option value="No">No</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field
+        class="example-full-width"
+        appearance="fill"
+        *ngIf="materialValue === 'Yes'"
+      >
+        <mat-label>Damaged Equipment</mat-label>
+        <input
+          formControlName="DamagedEquipment"
+          matInput
+          placeholder="damagedEquipment"
+        />
+      </mat-form-field>
+      <mat-form-field
+        class="example-full-width"
+        appearance="fill"
+        *ngIf="materialValue === 'Yes'"
+      >
+        <mat-label>Estimated Loss</mat-label>
+        <input
+          formControlName="EstimatedLoss"
+          matInput
+          type="number"
+          class="example-right-align"
+          placeholder="0"
+        />
+        <span matPrefix>$&nbsp;</span>
+        <span matSuffix>.00</span>
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Action Plan</mat-label>
+        <input
+          formControlName="actionPlan"
+          matInput
+          placeholder="actionPlanId"
+        />
+      </mat-form-field>
     </div>
-      
+  </form>
+</div>
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button color="primary" (click)="addIncident()">
+    {{ Actionbtn }}
+  </button>
+  <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+</div>

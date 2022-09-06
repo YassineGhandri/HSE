@@ -13,8 +13,7 @@ import { PagesRoutingModule } from './pages-routing.module';
     CommonModule,   
     MaterialModule,
     ReactiveFormsModule, 
-    PagesRoutingModule,   
-    
+    PagesRoutingModule,      
   ],
   
 })

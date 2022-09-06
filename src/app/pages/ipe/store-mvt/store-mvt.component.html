@@ -1,1 +1,28 @@
-<p>store-mvt works!</p>
+<h1></h1>
+<div mat-dialog-content>
+    <form [formGroup]='IPEform'>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Type</mat-label>
+            <mat-select formControlName='type' disableRipple>
+                <mat-option value="Glove">Glove</mat-option>
+                <mat-option value="Helmet">Helmet</mat-option>
+                <mat-option value="Mask">Mask</mat-option>
+                <mat-option value="Shoes">Shoes</mat-option>
+                <mat-option value="Noise_helmet">Noise helmet</mat-option>
+                <mat-option value="Glasses">Glasses</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Code</mat-label>
+            <input formControlName='code' matInput placeholder="code">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Description</mat-label>
+            <input formControlName='description' matInput placeholder="description">
+        </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-actions [align]="'end'">
+    <button mat-raised-button color="primary" (click)="addIPE()">{{Actionbtn}}</button>
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+</div>
