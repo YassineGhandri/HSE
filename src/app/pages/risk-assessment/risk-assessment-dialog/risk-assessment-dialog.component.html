@@ -2,6 +2,10 @@
 
 <div mat-dialog-content>
     <form [formGroup]='riskAssessmentForm' >
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Reference</mat-label>
+        <input formControlName='reference' matInput placeholder="Reference" >
+      </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Responsible</mat-label>
           <mat-select formControlName='responsible' name="employee">
@@ -27,12 +31,8 @@
             <input formControlName='operation' matInput placeholder="operation" >
           </mat-form-field>
           <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Risks</mat-label>
-            <mat-select formControlName='risks' name="risk">
-              <mat-option *ngFor="let risk of risks" [value]="risk.title">
-              {{risk.title}}
-              </mat-option>
-            </mat-select>
+            <mat-label>Risks</mat-label>            
+              <input formControlName='risks' matInput placeholder="risks" >              
           </mat-form-field>
          
       </form>

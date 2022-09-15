@@ -1,6 +1,11 @@
 <h1>New RIRS</h1>
 <div mat-dialog-content>
   <form [formGroup]="rirsForm">
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Reference</mat-label>
+      <input formControlName="reference" matInput placeholder="site" />
+    </mat-form-field>
     
     <mat-form-field appearance="outline">
       <mat-label>date</mat-label>

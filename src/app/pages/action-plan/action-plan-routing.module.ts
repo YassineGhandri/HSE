@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ActionPlanComponent } from './action-plan.component';
 
 const routes: Routes = [
-  { path: 'action_plan', component: ActionPlanComponent },
+  { path: 'action_plans', component: ActionPlanComponent },
 ];
 
 @NgModule({

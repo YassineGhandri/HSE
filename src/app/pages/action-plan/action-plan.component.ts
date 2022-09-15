@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { ActionPlanDetailsComponent } from './action-plan-details/action-plan-details.component';
 import { ActionPlanDialogComponent } from './action-plan-dialog/action-plan-dialog.component';
 import { ActionPlanService } from './action-plan.service';
 
@@ -53,14 +54,16 @@ export class ActionPlanComponent implements OnInit {
       })
 
   }
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-
-    if (this.dataSource.paginator) {
-      this.dataSource.paginator.firstPage();
-    }
+  openDetails() {    
+    this.dialog.open(ActionPlanDetailsComponent, {
+      width:'600px',
+    }).afterClosed().subscribe(val=>
+      {
+        if(val==='save')
+        this.getAllAP();
+      })
   }
+  
   editAP(row:any){
     this.dialog.open(ActionPlanDialogComponent,{
       width:'600px',
@@ -83,7 +86,13 @@ export class ActionPlanComponent implements OnInit {
       }
     })
   }
-
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
+  }
 }
 
 

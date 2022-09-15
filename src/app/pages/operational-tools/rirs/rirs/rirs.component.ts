@@ -4,6 +4,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { RIRSService } from '../rirs.service';
+import { RIRSdetailsComponent } from '../rirsdetails/rirsdetails.component';
 import { RIRSDialogComponent } from '../rirsdialog/rirsdialog.component';
 
 @Component({
@@ -13,7 +14,7 @@ import { RIRSDialogComponent } from '../rirsdialog/rirsdialog.component';
 })
 export class RIRSComponent implements OnInit {
 
-  displayedColumns: string[] = ['status','initiator','site',  'priority', 'description','action','validation'];
+  displayedColumns: string[] = ['reference','status','initiator','site','description','action','validation'];
 
   status='new';
   statusStyle = 'status-default';
@@ -40,7 +41,15 @@ export class RIRSComponent implements OnInit {
       if (val === 'save')
         this.getAllRirs();
     })
-
+  }
+  openDetails() {    
+    this.dialog.open(RIRSdetailsComponent, {
+      width:'600px',
+    }).afterClosed().subscribe(val=>
+      {
+        if(val==='save')
+        this.getAllRirs();
+      })
   }
   getAllRirs() {
     this.rirsService.getRirs().subscribe({

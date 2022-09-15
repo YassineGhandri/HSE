@@ -1,48 +1,10 @@
 {
-  "Risks": [
-    {
-      "title": "Fire",
-      "probability": "Occasionaly",
-      "severity": "Critical",
-      "rating": "5",
-      "comment": "Sulpfur fire produce exotic gas SO2 ",
-      "id": "002"
-    },
-    {
-      "title": "Explosion",
-      "probability": "Improbable",
-      "severity": "Catastrophic",
-      "rating": "3",
-      "comment": "it can be happen whit sulphur puverisation",
-      "id": "004"
-    },
-    {
-      "title": "Acid leackage",
-      "probability": "Frequent",
-      "severity": "Critical",
-      "rating": "4",
-      "comment": "all operations on acid circuit can create an acid leackage",
-      "id": "001"
-    },
-    {
-      "title": "Steam leack",
-      "probability": "Occasionaly",
-      "severity": "Moderate",
-      "rating": "3",
-      "comment": "it can cause a brun",
-      "id": "52WHuF7"
-    },
-    {
-      "title": "Gas Leack",
-      "probability": "Frequent",
-      "severity": "Critical",
-      "rating": "4",
-      "comment": "pb in respiration system",
-      "id": "h5sZmzo"
-    }
+  "Risks": [   
+   
   ],
   "risk_assessment": [
     {
+      "reference": "RA-2022/001",
       "responsible": "Moez Ezzine",
       "assistant": "Yassine Ghandri",
       "department": "Sulfuric",
@@ -51,6 +13,7 @@
       "id": 1
     },
     {
+      "reference": "RA-2022/002",
       "responsible": "Moez Ezzine",
       "assistant": "Yassine Ghandri",
       "department": "Sulfuric",
@@ -59,6 +22,7 @@
       "id": 2
     },
     {
+      "reference": "RA-2022/003",
       "responsible": "Med Ali Riahi",
       "assistant": "Hajjej Hbib",
       "department": "Sulfuric",
@@ -67,12 +31,31 @@
       "id": 3
     },
     {
+      "reference": "RA-2022/004",
       "responsible": "Yassine Ghandri",
       "assistant": "Yassine Ghandri",
       "department": "production",
       "operation": "lifting",
       "risks": "shutdown",
       "id": 4
+    },
+    {
+      "reference": "RA-2022/005",
+      "responsible": "Yassine Ghandri",
+      "assistant": "Moez Ezzine",
+      "department": "sulfurique",
+      "operation": "lifting",
+      "risks": "shutdown",
+      "id": 5
+    },
+    {
+      "reference": "RA-2022/006",
+      "responsible": "Moez Ezzine",
+      "assistant": "Yassine Ghandri",
+      "department": "S",
+      "operation": "S",
+      "risks": "S",
+      "id": 6
     }
   ],
   "employee": [
@@ -223,6 +206,7 @@
   ],
   "incident": [
     {
+      "reference": "I-2022/001",
       "date": "2022-07-25T23:00:00.000Z",
       "department": "Sulfurique 1&2",
       "description": "operator dropdown during steam valve closing",
@@ -242,6 +226,7 @@
       "id": 1
     },
     {
+      "reference": "I-2022/002",
       "date": "2022-08-01T23:00:00.000Z",
       "department": "SULF 3",
       "description": "acid leack",
@@ -259,6 +244,7 @@
       "id": 2
     },
     {
+      "reference": "I-2022/003",
       "date": "2022-08-04T23:00:00.000Z",
       "department": "phos1",
       "description": "sulfuric acid leack",
@@ -279,6 +265,7 @@
       "id": 3
     },
     {
+      "reference": "I-2022/004",
       "date": "2022-08-05T23:00:00.000Z",
       "department": "phos1",
       "description": "fire",
@@ -296,11 +283,31 @@
       "EstimatedLoss": 2500,
       "actionPlan": "AP-01",
       "id": 4
+    },
+    {
+      "reference": "I-2022/005",
+      "date": "2022-09-07T23:00:00.000Z",
+      "department": "SULF 3",
+      "description": "injury",
+      "reported_by": "Yassine Ghandri",
+      "injury": "Yes",
+      "TotalInjuries": 1,
+      "injuredEmployee": [
+        "Med Ali Riahi"
+      ],
+      "containmentLoss": "Yes",
+      "quantityLoss": "100",
+      "contaminatedEnvironment": "sea",
+      "materialLoss": "Yes",
+      "DamagedEquipment": "pompe",
+      "EstimatedLoss": 1000,
+      "actionPlan": "AP-005",
+      "id": 5
     }
   ],
   "permit_work": [
     {
-      "reference": "PW-001/2022",
+      "reference": "PW-2022/001",
       "type": "radio",
       "object": "inspection TK2501",
       "initiator": "Yassine Ghandri",
@@ -316,7 +323,7 @@
       "id": 4
     },
     {
-      "reference": "PW-002/2022",
+      "reference": "PW-2022/002",
       "type": "cold",
       "object": "Open absorption tower manhole",
       "initiator": "Yassine Ghandri",
@@ -326,7 +333,7 @@
       "id": 5
     },
     {
-      "reference": "PW-003/2022",
+      "reference": "PW-2022/003",
       "type": "hot",
       "object": "Welding heat exchanger",
       "initiator": "Yassine Ghandri",
@@ -334,6 +341,18 @@
       "risks": "Acid leackage",
       "executors": "Med Ali Riahi",
       "id": 6
+    },
+    {
+      "reference": "PW-2022/004",
+      "type": "hot",
+      "object": "WELDER",
+      "initiator": "Med Ali Riahi",
+      "startDate": "2022-09-07T23:00:00.000Z",
+      "risks": "S",
+      "executors": [
+        "Rahmani Abdelkarim"
+      ],
+      "id": 7
     }
   ],
   "action_plan": [
@@ -528,50 +547,24 @@
   ],
   "trainings": [
     {
-      "subject": "FIRE FIGHTING",
-      "validity": "2 ",
+      "reference": "T-001",
+      "title": "Fire Fighting",
+      "validity": "2",
       "necessity": "required For All",
       "department": "",
       "comment": "nn",
       "id": 1
     },
     {
-      "subject": "FIRST AID EMERGENCY",
-      "validity": "2 ",
-      "necessity": "required For All",
-      "department": "",
-      "comment": "nn",
-      "id": 2
-    },
-    {
-      "subject": "ELECTRICAL HABILITY",
-      "validity": "2 ",
+      "reference": "T-002",
+      "title": "Electrical",
+      "validity": "2",
       "necessity": "required For",
       "department": [
         "Elec & instrum"
       ],
       "comment": "nn",
-      "id": 4
-    },
-    {
-      "subject": "LIFTING ",
-      "validity": "1 ",
-      "necessity": "required For",
-      "department": [
-        "mécanique"
-      ],
-      "comment": "nn",
-      "id": 5
-    },
-    {
-      "subject": "SCAFOLDING",
-      "validity": "2 ",
-      "necessity": "required For",
-      "department": [
-        "mécanique"
-      ],
-      "comment": "nn",
-      "id": 6
+      "id": 2
     }
   ],
   "IPE": [
@@ -598,10 +591,17 @@
       "code": "004",
       "description": "nn",
       "id": 4
+    },
+    {
+      "type": "Mask",
+      "code": "007",
+      "description": "corona",
+      "id": 5
     }
   ],
   "RIRS": [
     {
+      "reference": "RIRS-2022/001",
       "date": "2022-09-05T23:00:00.000Z",
       "site": "U2500",
       "initiator": "Med Ali Riahi",
@@ -610,25 +610,104 @@
       "id": 2
     },
     {
-      "date": "2022-09-05T23:00:00.000Z",
-      "site": "U500",
-      "initiator": "Rahmani Abdelkarim",
-      "priority": "A",
-      "description": "nn",
-      "id": 3
-    },
-    {
-      "status": "new",
+      "reference": "RIRS-2022/002",
       "date": "2022-09-05T23:00:00.000Z",
       "site": "u500",
       "initiator": "Moez Ezzine",
       "priority": "A",
       "description": "nn",
       "id": 4
+    },
+    {
+      "reference": "RIRS-2022/004",
+      "date": "2022-09-07T23:00:00.000Z",
+      "site": "mec",
+      "initiator": "Moez Ezzine",
+      "priority": "A",
+      "description": "shutdown",
+      "id": 5
     }
   ],
-  "MWA": [],
-  "stop_card": [],
+  "MWA": [
+    {
+      "reference": "MWA-2022/001",
+      "date": "2022-09-06T23:00:00.000Z",
+      "site": "nn",
+      "participatns": [
+        "Moez Ezzine",
+        "Yassine Ghandri",
+        "Med Ali Riahi",
+        "Rahmani Abdelkarim",
+        "Elbach Naseur",
+        "Lotfi Dhaoudi"
+      ],
+      "observartions": "",
+      "id": 1
+    },
+    {
+      "reference": "MWA-2022/002",
+      "date": "2022-09-07T23:00:00.000Z",
+      "site": "nn",
+      "participatns": [
+        "Lotfi Dhaoudi",
+        "oussama ben Ltaief",
+        "khnissi",
+        "Anwar Mahfoudh",
+        "khalil abdelmoulah"
+      ],
+      "observartions": "",
+      "id": 2
+    },
+    {
+      "reference": "mwa-004",
+      "date": "2022-09-07T23:00:00.000Z",
+      "site": "usine",
+      "participatns": [
+        "Yassine Ghandri",
+        "Med Ali Riahi",
+        "Rahmani Abdelkarim",
+        "Elbach Naseur"
+      ],
+      "observartions": "nbdndbjbsdhcbsdvcdvvk",
+      "id": 3
+    }
+  ],
+  "stop_card": [
+    {
+      "reference": "STC-2022/001",
+      "date": "2022-09-06T23:00:00.000Z",
+      "site": "U500",
+      "initiator": "Moez Ezzine",
+      "observed_risks": "scaffolding shutdown ",
+      "id": 1
+    },
+    {
+      "reference": "STC-2022/002",
+      "date": "2022-09-06T23:00:00.000Z",
+      "site": "U500",
+      "initiator": "Med Ali Riahi",
+      "observed_risks": "acid leak",
+      "id": 2
+    }
+  ],
+  "trainingSessions": [
+    {
+      "reference": "TS/2022-001",
+      "subject": "Fire Fighting",
+      "date": "2022-09-13T23:00:00.000Z",
+      "participants": [
+        "Moez Ezzine",
+        "Yassine Ghandri",
+        "Med Ali Riahi",
+        "Rahmani Abdelkarim",
+        "Elbach Naseur",
+        "Lotfi Dhaoudi"
+      ],
+      "center": "STIR",
+      "comment": "NN",
+      "id": 1
+    }
+  ],
   "comments": [
     {
       "id": 1,

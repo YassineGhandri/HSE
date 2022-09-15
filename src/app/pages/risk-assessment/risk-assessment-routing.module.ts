@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { RiskAssessmentComponent } from './risk-assessment.component';
 
-const routes:Routes=[{ path: 'risk_assessment', component: RiskAssessmentComponent },]
+const routes:Routes=[{ path: 'risk_assessments', component: RiskAssessmentComponent },]
 
 @NgModule({
   imports: [

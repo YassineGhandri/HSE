@@ -6,12 +6,14 @@ import { PermitWorkDialogComponent } from './permit-work-dialog/permit-work-dial
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { PermitWorkRoutingModule } from './permit-work-routing.module';
+import { PermitWorkDetailsComponent } from './permit-work-details/permit-work-details.component';
 
 
 @NgModule({
   declarations: [
     PermitWorkComponent,
-    PermitWorkDialogComponent
+    PermitWorkDialogComponent,
+    PermitWorkDetailsComponent
   ],
   imports: [
     CommonModule,

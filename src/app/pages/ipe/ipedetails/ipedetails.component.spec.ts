@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MWAComponent } from './mwa.component';
+import { IPEdetailsComponent } from './ipedetails.component';
 
-describe('MWAComponent', () => {
-  let component: MWAComponent;
-  let fixture: ComponentFixture<MWAComponent>;
+describe('IPEdetailsComponent', () => {
+  let component: IPEdetailsComponent;
+  let fixture: ComponentFixture<IPEdetailsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MWAComponent ]
+      declarations: [ IPEdetailsComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MWAComponent);
+    fixture = TestBed.createComponent(IPEdetailsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

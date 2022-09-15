@@ -24,9 +24,15 @@ mat-drawer-content{
 .content{
   padding: 10px;
   margin: 20px;
-  background-color: white;    
+   
+  
 }
-
-
+table,mat-paginator{
+  background: rgba(230, 231, 230, 0.3);
+}
+.reference{
+  color:blue;
+  text-decoration:underline;
+}
 
 

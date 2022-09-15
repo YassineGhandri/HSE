@@ -18,9 +18,10 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatMenuModule} from '@angular/material/menu';
-import { HighchartsChartModule } from 'highcharts-angular';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatExpansionModule} from '@angular/material/expansion';
+
+
 const materials=[MatToolbarModule,
                   MatListModule,
                   MatSidenavModule,
@@ -41,8 +42,7 @@ const materials=[MatToolbarModule,
                   MatMenuModule,
                   MatRadioModule,
                   MatExpansionModule,
-                  CommonModule,
-                
+                  CommonModule,                
 ]
 @NgModule({
   imports: [...materials],

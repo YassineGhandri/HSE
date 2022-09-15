@@ -6,6 +6,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { IPEService } from './ipe.service';
+import { IPEdetailsComponent } from './ipedetails/ipedetails.component';
 import { IPEdialogComponent } from './ipedialog/ipedialog.component';
 
 
@@ -20,7 +21,7 @@ export class IPEComponent implements OnInit {
   isShow = true;
   panelOpenState = false;
 
-  displayedColumns: string[] = ['type', 'code', 'description', 'store', 'action', 'MVT'];
+  displayedColumns: string[] = [ 'code','type', 'description', 'store', 'action', 'MVT'];
 
   dataSource!: MatTableDataSource<any>;
 
@@ -45,6 +46,15 @@ export class IPEComponent implements OnInit {
         this.getAllIPE();
     })
 
+  }
+  openDetails() {    
+    this.dialog.open(IPEdetailsComponent, {
+      width:'600px',
+    }).afterClosed().subscribe(val=>
+      {
+        if(val==='save')
+        this.getAllIPE();
+      })
   }
   sortMVT() {
     this.ipeService.getIPE().subscribe({

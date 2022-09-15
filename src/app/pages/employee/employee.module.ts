@@ -6,12 +6,14 @@ import { MaterialModule } from 'src/app/material/material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { EmployeeRoutingModule } from './employee-routing.module';
+import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 
 
 @NgModule({
   declarations: [
     EmployeeComponent,
-    EmployeeDialogComponent
+    EmployeeDialogComponent,
+    EmployeeDetailsComponent
   ],
   imports: [
     CommonModule,

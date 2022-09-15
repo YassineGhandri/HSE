@@ -4,14 +4,15 @@ import { RiskAssessmentComponent } from './risk-assessment.component';
 import { MaterialModule } from 'src/app/material/material/material.module';
 import { RiskAssessmentDialogComponent } from './risk-assessment-dialog/risk-assessment-dialog.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
 import { RiskAssessmentRoutingModule } from './risk-assessment-routing.module';
+import { RiskAssessmentDetailsComponent } from './risk-assessment-details/risk-assessment-details.component';
 
 
 @NgModule({
   declarations: [
     RiskAssessmentComponent,
-    RiskAssessmentDialogComponent
+    RiskAssessmentDialogComponent,
+    RiskAssessmentDetailsComponent
   ],
   imports: [
     CommonModule,

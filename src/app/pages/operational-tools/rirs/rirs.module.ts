@@ -5,6 +5,7 @@ import { RIRSDialogComponent } from './rirsdialog/rirsdialog.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MaterialModule } from 'src/app/material/material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RIRSdetailsComponent } from './rirsdetails/rirsdetails.component';
 
 const routes:Routes=[{path:'RIRS',component:RIRSComponent}]
 
@@ -12,7 +13,8 @@ const routes:Routes=[{path:'RIRS',component:RIRSComponent}]
 @NgModule({
   declarations: [
     RIRSComponent,
-    RIRSDialogComponent
+    RIRSDialogComponent,
+    RIRSdetailsComponent
   ],
   imports: [
     CommonModule,

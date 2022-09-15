@@ -1,0 +1,48 @@
+.addbtn{
+    margin-top: 10px;  
+    margin-bottom: 10px;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }  
+  td, th {
+    width: 10%;
+  }
+  
+  th{
+    background-color: rgb(237, 243, 243);
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  mat-drawer-content{
+    background-color: rgb(221, 223, 223);
+  } 
+  
+  
+  .content{
+    padding: 10px;
+    margin: 20px;
+    background-color: white;    
+  }
+  .validbtn{
+    width:15px;
+  }
+  
+  .status-default {
+    color: Red;
+    text-decoration: underline;
+  }
+  
+  .status-change {
+    color:green;
+    font-weight: bold;
+    
+  } 
+  table,mat-paginator{
+    background: rgba(230, 231, 230, 0.3);
+  }
+  
+  
+  

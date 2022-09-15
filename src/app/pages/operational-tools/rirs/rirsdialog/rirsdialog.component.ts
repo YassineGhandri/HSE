@@ -30,7 +30,7 @@ export class RIRSDialogComponent implements OnInit {
       this.employees = res;}});
 
     this.rirsForm = this.formBuilder.group({
-     
+      reference: ['', Validators.required],
       date: ['', Validators.required],
       site: ['', Validators.required],
       initiator: ['', Validators.required],

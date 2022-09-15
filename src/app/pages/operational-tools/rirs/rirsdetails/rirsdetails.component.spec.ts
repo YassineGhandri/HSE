@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StopCardComponent } from './stop-card.component';
+import { RIRSdetailsComponent } from './rirsdetails.component';
 
-describe('StopCardComponent', () => {
-  let component: StopCardComponent;
-  let fixture: ComponentFixture<StopCardComponent>;
+describe('RIRSdetailsComponent', () => {
+  let component: RIRSdetailsComponent;
+  let fixture: ComponentFixture<RIRSdetailsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StopCardComponent ]
+      declarations: [ RIRSdetailsComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(StopCardComponent);
+    fixture = TestBed.createComponent(RIRSdetailsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,6 +1,9 @@
 import { Employee } from "../employee/employee";
+import { IncidentComponent } from "./incident.component";
 
 export interface Incident {
+    id:number;
+    reference:string;
     date:Date;
     zone:String;
     description:String;
@@ -16,7 +19,7 @@ export interface Incident {
     actionPlan:String;
 }
 
-    
+
    
     
     

@@ -1,3 +1,5 @@
+
+
 .logo {
   padding: 10px;
   width: 15%;
@@ -9,13 +11,14 @@
   height: 50px;
 }
 .menu {
-  margin-left: 50px;
+  margin-left: 70px;
   width: 80%;
   display: flex;
   justify-content: space-between;
 }
 .mainMenu {
-  
+
+  display: flex;
   width: 60%;
   justify-content: space-between;
 }
@@ -23,15 +26,15 @@
 .item {
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
-  margin-left: 30px;
+  
 }
 
 a {
   text-decoration: none;
-  color:white;
+  color: rgb(70, 144, 187);
 }
 a:hover {
-  color: rgb(128, 115, 0);
+  color: rgb(73, 143, 45);
 }
 
 img
@@ -41,7 +44,40 @@ img
 }
 .sign{
   font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 20px;
+  color: rgb(70, 144, 187);
 }
 .matMenuItem>a{
   color: black;
+}
+footer{
+  margin-top: 50px;
+  padding-top: 10px;    
+  background-color: #002838;
+  color: white;
+}
+.footer-top{
+  
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 150px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.footer-top-h1{
+font-size: 30px;
+}
+ul{
+ 
+  padding-left: 0;
+}
+li{
+list-style: none;
+font-size: 1.1rem;
+margin-top: 3px;
+}
+.copyrigth{
+  color: white;
+  border-top: 0.5px black solid; 
+  padding: 10px 50px;
 }

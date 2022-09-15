@@ -1,4 +1,54 @@
-.example-card {
-    max-width: 400px;
-    margin-bottom: 8px;
-  }
+.home-header {
+  background-image: url("https://www.occupationalhc.com/wp-content/uploads/2022/01/OHC-Blog-Images-Web.png");
+  background-size: 100%;
+  background-position: center;
+
+  padding-left: 70px;
+}
+
+.h1-header {
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+p {
+  font-size: 1.1rem;
+}
+.citation {
+  width: 40%;
+  color: rgb(219, 78, 97);
+}
+.first-home {
+  padding-top: 80px;
+}
+.h1-home {
+  color: rgb(68, 136, 224);
+  text-align: center;
+  font-size: 2rem;
+}
+.p-home {
+  text-align: center;
+  line-height: 200%;
+  font-size: 0.9rem;
+}
+.advantages{
+  margin-top: 50px;
+  padding: 10px 100px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.card{
+  padding-top: 20px;
+  text-align: center;
+  width: 30%; 
+  margin-top: 30px;
+  height: 250px;
+}
+.card:hover{
+  border:solid blue 2px;
+  box-sizing: border-box;
+}
+.card-title{
+  font-weight:500;
+  margin-top: 10px;
+}

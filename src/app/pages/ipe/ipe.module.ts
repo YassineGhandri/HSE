@@ -7,13 +7,15 @@ import { MaterialModule } from 'src/app/material/material/material.module';
 import { IPEdialogComponent } from './ipedialog/ipedialog.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { StoreMVTComponent } from './store-mvt/store-mvt.component';
+import { IPEdetailsComponent } from './ipedetails/ipedetails.component';
 
 
 @NgModule({
   declarations: [
     IPEComponent,
     IPEdialogComponent,
-    StoreMVTComponent
+    StoreMVTComponent,
+    IPEdetailsComponent
   ],
   imports: [
     CommonModule,

@@ -12,7 +12,7 @@ import { MaterialModule } from 'src/app/material/material/material.module';
     CommonModule,
     OperationalToolsRoutingModule,
     MaterialModule,
-    OperationalToolsRoutingModule
+    
   ]
 })
 export class OperationalToolsModule { }

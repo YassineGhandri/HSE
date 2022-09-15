@@ -36,6 +36,8 @@ export class IncidentDialogComponent implements OnInit {
         this.departments = res;}});
     
     this.incidentForm=this.formBuilder.group({
+      
+      reference:['',Validators.required],
         date:['',Validators.required],
         department:['',Validators.required],
         description:['',Validators.required],

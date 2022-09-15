@@ -1,1 +1,39 @@
-<p>mwadialog works!</p>
+<h1>New MWA</h1>
+<div mat-dialog-content>
+  
+  <form [formGroup]="MWAForm">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Reference</mat-label>
+      <input formControlName="reference" matInput placeholder="Reference" />
+    </mat-form-field>    
+    <mat-form-field appearance="outline">
+      <mat-label>date</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="date" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>site</mat-label>
+      <input formControlName="site" matInput placeholder="site" />
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>participatns</mat-label>
+      <mat-select formControlName="participatns" name="participatns" multiple>
+        <mat-option *ngFor="let employee of employees" [value]="employee.name">
+          {{ employee.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>    
+     <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Observartions</mat-label>
+      <input formControlName="observartions" matInput placeholder="observartions" />
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button color="primary" (click)="addMWA()">
+    {{ Actionbtn }}
+  </button>
+  <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+</div>
+

@@ -4,6 +4,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { RiskAssessmentDialogComponent } from '../../pages/risk-assessment/risk-assessment-dialog/risk-assessment-dialog.component';
+import { RiskAssessmentDetailsComponent } from './risk-assessment-details/risk-assessment-details.component';
 import { RiskAssessmentService } from './risk-assessment.service';
 
 @Component({
@@ -13,7 +14,7 @@ import { RiskAssessmentService } from './risk-assessment.service';
 })
 export class RiskAssessmentComponent implements OnInit {
 
-  displayedColumns: string[]=['department','operation','risks','action'];
+  displayedColumns: string[]=['reference','department','operation','risks','action'];
 
   dataSource!: MatTableDataSource<any>; 
   
@@ -37,6 +38,16 @@ export class RiskAssessmentComponent implements OnInit {
         if(val==='save')
         this.getAllRiskAssessment();
       })
+  }
+  openDetails() {    
+    this.dialog.open(RiskAssessmentDetailsComponent, {
+      width:'600px',
+    }).afterClosed().subscribe(val=>
+      {
+        if(val==='save')
+        this.getAllRiskAssessment();
+      })
+
   }
   
   getAllRiskAssessment(){

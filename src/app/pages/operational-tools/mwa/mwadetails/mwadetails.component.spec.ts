@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StopCardDialogComponent } from './stop-card-dialog.component';
+import { MWAdetailsComponent } from './mwadetails.component';
 
-describe('StopCardDialogComponent', () => {
-  let component: StopCardDialogComponent;
-  let fixture: ComponentFixture<StopCardDialogComponent>;
+describe('MWAdetailsComponent', () => {
+  let component: MWAdetailsComponent;
+  let fixture: ComponentFixture<MWAdetailsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StopCardDialogComponent ]
+      declarations: [ MWAdetailsComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(StopCardDialogComponent);
+    fixture = TestBed.createComponent(MWAdetailsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

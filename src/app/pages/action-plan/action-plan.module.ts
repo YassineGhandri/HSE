@@ -6,13 +6,15 @@ import { MaterialModule } from 'src/app/material/material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ActionPlanRoutingModule } from './action-plan-routing.module';
+import { ActionPlanDetailsComponent } from './action-plan-details/action-plan-details.component';
 
 
 
 @NgModule({
   declarations: [
     ActionPlanComponent,
-    ActionPlanDialogComponent
+    ActionPlanDialogComponent,
+    ActionPlanDetailsComponent
   ],
   imports: [
     CommonModule,

@@ -1,11 +1,10 @@
 .pagesContainer{
-    display:flex;   
-    background-color: rgb(228, 225, 225);
+    display:flex;    
     
 }
 .sideMenu{  
     padding-top: 10px;  
-    padding-left: 0px;
+    padding-left: 0px;    
     width: 20%;
     background-color: white;
     border-right: solid 1px  rgb(109, 108, 108); 
@@ -15,24 +14,35 @@
 }
 a{
     text-decoration: none;
-    font-size: 15px;
-    color: rgb(109, 108, 108);
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
 }
 a:hover{
     color:  rgb(0, 174, 255);
 }
-li{
+.featureItem{
     list-style: none;
-    margin:10px 15px;  
+    margin:1px 15px; 
+    height: 50px; 
+    background-color: rgb(44, 78, 84);
+   padding-top: 5px;
     
 }
 li:hover{
     border-bottom: 1px solid gray;
 }
 
-ul{
-    
+.features{
+    padding-top: 15px;
     padding-left: 0;
+}
+.Operational_Tools_item{
+    list-style: none;
+}
+
+.Operational_Tools_item>a{
+    color:black;
 }
 img
 {

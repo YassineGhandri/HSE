@@ -1,1 +1,73 @@
-<p>stop-card works!</p>
+<div class="content">
+    <button class="addbtn" mat-raised-button color="warn" (click)="openDialog()">
+      Add STOP CARD
+    </button>
+  
+    <div mat-dialog-content class="risk">
+      <mat-form-field appearance="standard">
+        <mat-label>Filter</mat-label>
+        <input
+          matInput
+          (keyup)="applyFilter($event)"
+          placeholder="Ex. Mia"
+          #input
+        />
+      </mat-form-field>
+  
+      <div class="mat-elevation">
+        <table mat-table [dataSource]="dataSource" matSort width="100%">
+          <ng-container matColumnDef="reference">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Reference</th>
+            <td mat-cell *matCellDef="let row">{{ row.reference }}</td>
+          </ng-container>
+          <ng-container matColumnDef="initiator">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Initiator</th>
+            <td mat-cell *matCellDef="let row">{{ row.initiator }}</td>
+          </ng-container>
+          <ng-container matColumnDef="date">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Date</th>
+            <td mat-cell *matCellDef="let row">{{ row.date | date: 'dd/MM/yyyy' }}</td>
+          </ng-container>
+  
+          <ng-container matColumnDef="site">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Site</th>
+            <td mat-cell *matCellDef="let row">{{ row.site }}</td>
+          </ng-container>
+    
+          <ng-container matColumnDef="observed_risks">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>observed risks</th>
+            <td mat-cell *matCellDef="let row">{{ row.observed_risks }}</td>
+          </ng-container>
+  
+          <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Actions</th>
+            <td mat-cell *matCellDef="let row">
+              <button mat-icon-button color="primary" (click)="edit(row)">
+                <mat-icon>edit</mat-icon>
+              </button>
+              <button mat-icon-button color="warn" (click)="deleteSTC(row.id)">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </td>
+          </ng-container>
+            
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  
+          <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="4">
+              No data matching the filter "{{ input.value }}"
+            </td>
+          </tr>
+        </table>
+  
+        <mat-paginator
+          [pageSizeOptions]="[5, 10, 25, 100]"
+          aria-label="Select page of users"
+        ></mat-paginator>
+      </div>
+    </div>
+  </div>
+  
+  
+

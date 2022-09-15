@@ -7,14 +7,20 @@
     font-size: 14px;
     width: 100%;
   }  
+  table,mat-paginator{
+    background: rgba(230, 231, 230, 0.3);
+  }
+
 td, th {
     width: 10%;
   }
-  
+  td{
+    color: black;
+  }
   th{
     background-color: rgb(237, 243, 243);
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: bold;    
   }
   mat-drawer-content{
     background-color: rgb(221, 223, 223);
@@ -26,9 +32,12 @@ td, th {
   .content{
     padding: 10px;
     margin: 20px;
-    background-color: white;    
+      
   }
-  
+  .reference{
+    color:blue;
+    text-decoration:underline;
+  }
   
   
   

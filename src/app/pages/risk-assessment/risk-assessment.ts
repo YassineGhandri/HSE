@@ -1,5 +1,6 @@
 
 export interface RiskAssessment {
+    reference:String;
     responsible:String; 
     assistant:String; 
     //LocalDateTime:Date;

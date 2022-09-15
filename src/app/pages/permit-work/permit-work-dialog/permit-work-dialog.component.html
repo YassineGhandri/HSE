@@ -1,60 +1,63 @@
 <h1>New Permit Work</h1>
 <div mat-dialog-content>
-    <form [formGroup]='PWForm' >
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Reference</mat-label>
-            <input formControlName='reference' matInput placeholder="reference" >
-          </mat-form-field>
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>type</mat-label>
-            <mat-select formControlName='type' disableRipple>
-                <mat-option value="hot">hot</mat-option>
-                <mat-option value="cold">cold</mat-option>
-                <mat-option value="radio">radio</mat-option>                
-            </mat-select>
-          </mat-form-field>
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Object</mat-label>
-            <input formControlName='object' matInput placeholder="object" >
-          </mat-form-field>          
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>initiator</mat-label>
-            <mat-select formControlName='initiator'  name="employee">
-              <mat-option *ngFor="let employee of employees" [value]="employee.name">
-              {{employee.name}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field> 
-          <mat-form-field appearance="outline">
-            <mat-label>startDate</mat-label>
-            <input matInput [matDatepicker]="picker" formControlName='startDate'
-             placeholder="startDate">     
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>   
-          </mat-form-field>          
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>risks</mat-label>
-            <mat-select formControlName='risks'  name="risk" placeholder="risks" multiple>
-              <mat-option *ngFor="let risk of risks" [value]="risk.title">
-              {{risk.title}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>executors</mat-label>
-            <mat-select formControlName='executors'  name="employee" placeholder="executors" multiple>
-              <mat-option *ngFor="let employee of employees" [value]="employee.name">
-              {{employee.name}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-         
-      </form>
-    </div>
-    <div mat-dialog-actions [align]="'end'">
-      <button mat-raised-button color="primary" (click)="addPW()" >{{Actionbtn}}</button>      
-      <button mat-raised-button color="warn" mat-dialog-close >Close</button>
-      
-    </div>
-      
-
+  <form [formGroup]="PWForm">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Reference</mat-label>
+      <input formControlName="reference" matInput placeholder="reference" />
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>type</mat-label>
+      <mat-select formControlName="type" disableRipple>
+        <mat-option value="hot">hot</mat-option>
+        <mat-option value="cold">cold</mat-option>
+        <mat-option value="radio">radio</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Object</mat-label>
+      <input formControlName="object" matInput placeholder="object" />
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>initiator</mat-label>
+      <mat-select formControlName="initiator" name="employee">
+        <mat-option *ngFor="let employee of employees" [value]="employee.name">
+          {{ employee.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>startDate</mat-label>
+      <input
+        matInput
+        [matDatepicker]="picker"
+        formControlName="startDate"
+        placeholder="startDate"
+      />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Risks</mat-label>
+      <input formControlName="risks" matInput placeholder="risks" />
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>executors</mat-label>
+      <mat-select
+        formControlName="executors"
+        name="employee"
+        placeholder="executors"
+        multiple
+      >
+        <mat-option *ngFor="let employee of employees" [value]="employee.name">
+          {{ employee.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button color="primary" (click)="addPW()">
+    {{ Actionbtn }}
+  </button>
+  <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+</div>

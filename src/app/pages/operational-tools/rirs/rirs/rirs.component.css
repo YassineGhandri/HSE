@@ -42,4 +42,6 @@
   } 
   
   
-  
+  table,mat-paginator{
+    background: rgba(230, 231, 230, 0.3);
+  }

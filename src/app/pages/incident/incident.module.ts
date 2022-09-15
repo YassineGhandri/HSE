@@ -6,12 +6,14 @@ import { MaterialModule } from 'src/app/material/material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { IncidentRoutingModule } from './incident-routing.module';
+import { IncidentDetailsComponent } from './incident-details/incident-details.component';
 
 
 @NgModule({
   declarations: [
     IncidentComponent,
-    IncidentDialogComponent
+    IncidentDialogComponent,
+    IncidentDetailsComponent
   ],
   imports: [
     CommonModule,

@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { PermitWorkDetailsComponent } from './permit-work-details/permit-work-details.component';
 import { PermitWorkDialogComponent } from './permit-work-dialog/permit-work-dialog.component';
 import { PermitWorkService } from './permit-work.service';
 
@@ -29,6 +30,16 @@ export class PermitWorkComponent implements OnInit {
   openDialog() {
     
     this.dialog.open(PermitWorkDialogComponent, {
+      width:'600px',
+    }).afterClosed().subscribe(val=>
+      {
+        if(val==='save')
+        this.getAllPW();
+      })
+
+  }
+  openDetails() {    
+    this.dialog.open(PermitWorkDetailsComponent, {
       width:'600px',
     }).afterClosed().subscribe(val=>
       {
