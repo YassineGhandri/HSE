@@ -20,6 +20,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 
 const materials=[MatToolbarModule,
@@ -42,6 +44,8 @@ const materials=[MatToolbarModule,
                   MatMenuModule,
                   MatRadioModule,
                   MatExpansionModule,
+                  MatTabsModule,
+                  MatTooltipModule,
                   CommonModule,                
 ]
 @NgModule({

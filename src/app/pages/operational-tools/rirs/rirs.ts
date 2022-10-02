@@ -1,8 +1,10 @@
 import { Employee } from "../../employee/employee";
 
 export interface RIRS {
-    Date:Date;
-    initiator:Employee;
+    reference:string;
+    status:string;
+    Date:Date;    
+    initiator:string;
     site:string;
     priority:string;
     description:string;

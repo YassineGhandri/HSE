@@ -14,7 +14,9 @@ import { PermitWorkService } from './permit-work.service';
 })
 export class PermitWorkComponent implements OnInit {
 
-  displayedColumns: string[] = ['reference', 'type', 'object','initiator','action'];  
+  permitStatus='New';
+
+  displayedColumns: string[] = ['reference', 'type', 'object','initiator','status','action'];  
   dataSource!: MatTableDataSource<any>;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;

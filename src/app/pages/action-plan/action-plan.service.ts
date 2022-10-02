@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ActionPlan } from './action-plan';
 
 @Injectable({
   providedIn: 'root'
@@ -19,5 +21,8 @@ export class ActionPlanService {
   }
   deleteAP(id:number){
     return this.http.delete<any>('http://localhost:3000/action_plan/'+id)
+  }
+  getAPById(id:string):Observable<ActionPlan>{
+    return this.http.get<ActionPlan>('http://localhost:3000/action_plan/'+id);
   }
 }

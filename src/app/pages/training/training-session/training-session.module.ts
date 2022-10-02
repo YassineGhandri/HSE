@@ -7,7 +7,10 @@ import { TraningSessionDialogComponent } from './traning-session-dialog/traning-
 import { MaterialModule } from 'src/app/material/material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 
-const routes:Routes=[{path: 'training_sessions', component: TrainingSessionComponent}]
+const routes:Routes=[
+  {path: 'training_sessions', component: TrainingSessionComponent},
+  {path: 'training_sessions/:id', component: TrainingSessionDetailsComponent},
+]
 
 @NgModule({
   declarations: [

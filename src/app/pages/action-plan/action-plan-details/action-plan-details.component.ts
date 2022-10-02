@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ActionPlan } from '../action-plan';
+import { ActionPlanService } from '../action-plan.service';
 
 @Component({
   selector: 'app-action-plan-details',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActionPlanDetailsComponent implements OnInit {
 
-  constructor() { }
+  actionPlan!:ActionPlan;
+  constructor(
+    private route:ActivatedRoute,
+    private actionPlanService:ActionPlanService
+  ) { }
 
   ngOnInit(): void {
+    const id=this.route.snapshot.paramMap.get('id')||'';
+    this.actionPlanService.getAPById(id).subscribe(
+      (res)=>{
+        this.actionPlan=res;
+      }
+    )
   }
 
 }

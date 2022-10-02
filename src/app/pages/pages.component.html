@@ -7,7 +7,11 @@
       />
     </div>
     <ul class="features">
-     
+      <li class="featureItem">
+        <a [routerLink]="['employees']">
+          <mat-icon> traffic</mat-icon> Employees
+        </a>
+      </li>
       <li class="featureItem">
         <a [routerLink]="['risk_assessments']"
           ><mat-icon> traffic</mat-icon> Risks Assessments</a
@@ -29,73 +33,27 @@
         >
       </li>
       <li class="featureItem">
-        <a [routerLink]="['ipe']"
-          ><mat-icon>supervised_user_circle</mat-icon> IPE Management</a
-        >
+        <a [routerLink]="['operational_tools/RIRS']">
+          <mat-icon>supervised_user_circle</mat-icon>
+          RIRS
+          </a>
+          </li>
+
+      <li class="featureItemButton">
+        <button (click)="toggleDisplayDivIf1()" class="operational">
+          <mat-icon>supervised_user_circle</mat-icon>
+          Trainings
+        </button>
       </li>
-      <li class="featureItem">
-        <a>
-          <mat-accordion style="width: 50%">
-            <mat-expansion-panel hideToggle>
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                  <mat-icon>supervised_user_circle</mat-icon>
-                  Operational Tools
-                </mat-panel-title>
-              </mat-expansion-panel-header>
-              <ul style="margin-left: 30px;">
-                <li class="Operational_Tools_item">
-                  <a [routerLink]="['operational_tools/RIRS']"> RIRS </a>
-                </li>
-                <li class="Operational_Tools_item">
-                  <a [routerLink]="['operational_tools/stop_card']">
-                    Stop Card
-                  </a>
-                </li>
-                <li class="Operational_Tools_item"> 
-                  <a [routerLink]="['operational_tools/MWAs']">
-                    
-                     MWA </a>
-                </li>
-              </ul>
-            </mat-expansion-panel>
-          </mat-accordion>
-        </a>
+      <li class="featureItemBelow" *ngIf="!isShowDivIf1">
+        <a [routerLink]="['trainings/newTrainings']"> New Training </a>
       </li>
-      <li class="featureItem">
-        <a>
-          <mat-accordion style="width: 50%">
-            <mat-expansion-panel hideToggle>
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                  <mat-icon>supervised_user_circle</mat-icon> Trainings
-                </mat-panel-title>
-              </mat-expansion-panel-header>
-              <ul style="margin-left: 30px;">
-                <li class="Operational_Tools_item">
-                  <a [routerLink]="['trainings/newTrainings']"> new training </a>
-                </li>
-                <li class="Operational_Tools_item">
-                  <a [routerLink]="['trainings/training_sessions']">
-                    training session
-                  </a>
-                </li>                
-              </ul>
-            </mat-expansion-panel>
-          </mat-accordion>
-        </a>
-      </li>      
-      
+      <li class="featureItemBelow" *ngIf="!isShowDivIf1">
+        <a [routerLink]="['trainings/training_sessions']"> Training Session </a>
+      </li>
     </ul>
   </div>
   <div class="mainMenu">
     <router-outlet></router-outlet>
   </div>
 </div>
-
-
-
-
-
-
-

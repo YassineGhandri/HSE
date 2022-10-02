@@ -1,1 +1,70 @@
-<p>dashboard works!</p>
+<div class="main-content" style="margin: 20px">
+    <div class="container-fluid">
+        <div class="row mb-3">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card">
+                    <div class="card-header card-header-warning card-header-icon">
+                        <div class="card-icon d-flex">
+                            <i class="material-icons" style="color: red">content_copy </i>
+                            <p class="card-category">INCIDENTS</p>
+                        </div>
+
+                        <h1 class="card-title dangerIndice">
+                            {{ incidents.length }}
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header card-header-success card-header-icon">
+                        <div class="card-icon d-flex">
+                            <i class="material-icons">store</i>
+                            <p class="card-category">PERMIT WORK</p>
+                        </div>
+
+                        <h1 class="card-title bestIndice">
+                            {{ permitWorks.length }}
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header card-header-danger card-header-icon">
+                        <div class="card-icon d-flex">
+                            <i class="material-icons">info_outline</i>
+                            <p class="card-category">TRAININGS SESSIONS</p>
+                        </div>
+                        <h1 class="card-title bestIndice">
+                            {{ trainingSessions.length }}
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header card-header-info card-header-icon">
+                        <div class="card-icon d-flex">
+                            <i class="fa fa-twitter"></i>
+                            <p class="card-category">RIRS</p>
+                        </div>
+
+                        <h1 class="card-title bestIndice">{{ rirs.length }}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div id="chart">
+                    <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [xaxis]="chartOptions.xaxis"
+                        [dataLabels]="chartOptions.dataLabels" [grid]="chartOptions.grid" [stroke]="chartOptions.stroke"
+                        [title]="chartOptions.title">
+                    </apx-chart>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

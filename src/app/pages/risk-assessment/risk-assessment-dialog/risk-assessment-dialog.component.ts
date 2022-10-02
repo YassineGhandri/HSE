@@ -3,8 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Employee } from '../../employee/employee';
 import { EmployeeService } from '../../employee/employee.service';
-import { Risk } from '../../risk/risk';
-import { RiskService } from '../../risk/risk.service';
+
 import { RiskAssessmentService } from '../risk-assessment.service';
 
 @Component({
@@ -14,8 +13,7 @@ import { RiskAssessmentService } from '../risk-assessment.service';
 })
 export class RiskAssessmentDialogComponent implements OnInit {
   selectedValue!: String;
-  employees: Employee[] = [];
-  risks: Risk[] = [];
+  employees: Employee[] = [];  
   riskAssessmentForm!: FormGroup;
   Actionbtn = 'save';
   constructor(
@@ -24,7 +22,7 @@ export class RiskAssessmentDialogComponent implements OnInit {
     private dialogRef: MatDialogRef<RiskAssessmentDialogComponent>,
     private riskAssessmentService: RiskAssessmentService,
     private employeeService: EmployeeService,
-    private riskService: RiskService
+    
   ) {}
 
   ngOnInit(): void {
@@ -33,11 +31,7 @@ export class RiskAssessmentDialogComponent implements OnInit {
         this.employees = res;
       },
     });
-    this.riskService.getRisk().subscribe({
-      next: (res) => {
-        this.risks = res;
-      },
-    });
+    
 
     this.riskAssessmentForm = this.formBuilder.group({
       reference: ['', Validators.required],

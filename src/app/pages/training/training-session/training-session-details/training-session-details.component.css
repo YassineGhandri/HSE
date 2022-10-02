@@ -1,0 +1,47 @@
+#container {
+    margin: 20px auto;
+    width: 95%;
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: solid 1px black;
+}
+
+.row {
+    border: solid 1px black;
+    border-bottom: none;
+}
+
+h4 {
+    color: rgb(6, 176, 243);
+}
+
+
+.reference {
+    padding-top: 20px;
+    border-right: black solid 1px;
+}
+
+.description {
+    border-bottom: solid 1px black;
+}
+
+.date,
+.reportor {
+    border-right: black solid 1px;
+    padding-top: 20px;
+}
+
+.center,
+.contamination,
+.subject {
+    padding-top: 20px;
+}
+
+.action_plan {
+    padding-top: 50px;
+}
+
+.participants {
+    padding-top: 20px;
+    border-bottom: black solid 1px;
+}

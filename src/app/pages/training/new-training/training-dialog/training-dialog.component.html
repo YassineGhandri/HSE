@@ -3,29 +3,23 @@
     <form [formGroup]='trainingForm' >
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Reference</mat-label>
-        <input formControlName='reference' matInput placeholder="Reference" >
+        <input formControlName='reference' matInput placeholder="Reference" unique>
       </mat-form-field>         
           <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Title</mat-label>
             <input formControlName='title' matInput placeholder="title" >
           </mat-form-field>
           <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Validity</mat-label>
+            <mat-label> Certification Validity</mat-label>
             <input formControlName='validity' matInput placeholder="validity" >
           </mat-form-field>
           <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Necessity</mat-label>
-            <mat-select formControlName='necessity' [(value)]="necessity">
-                <mat-option value="required For All">required For All</mat-option>
-                <mat-option value="required For">required For </mat-option>
-                <mat-option value="optional">optional</mat-option>                
-            </mat-select>
-          </mat-form-field>
-          <mat-form-field class="example-full-width" appearance="fill" *ngIf="necessity==='required For'">
             <mat-label>Department</mat-label>
-            <mat-select formControlName='department'  name="Department" multiple>
+            <mat-select formControlName='department' name="Department" multiple>
               <mat-option *ngFor="let department of departments" [value]="department.code">
-              {{department.code}}
+              
+                {{department.code}}
+              
               </mat-option>
             </mat-select>
           </mat-form-field>         

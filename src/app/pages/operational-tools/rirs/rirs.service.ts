@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { RIRS } from './rirs';
 
 @Injectable({
   providedIn: 'root'
@@ -19,5 +20,8 @@ export class RIRSService {
   }
   deleteRirs(id: number) {
     return this.http.delete<any>('http://localhost:3000/RIRS/' + id)
+  }
+  getRIRSById(id:string){
+    return this.http.get<RIRS>('http://localhost:3000/RIRS/'+id);
   }
 }

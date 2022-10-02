@@ -4,14 +4,16 @@ import { DepartmentComponent } from './department.component';
 import { DepartmentDialogComponent } from './department-dialog/department-dialog.component';
 import { MaterialModule } from 'src/app/material/material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
 import { DepartmentRoutingModule } from './department-routing.module';
+import { DepartmentDetailsComponent } from './department-details/department-details.component';
+
 
 
 @NgModule({
   declarations: [
     DepartmentComponent,
-    DepartmentDialogComponent
+    DepartmentDialogComponent,
+    DepartmentDetailsComponent
   ],
   imports: [
     CommonModule,

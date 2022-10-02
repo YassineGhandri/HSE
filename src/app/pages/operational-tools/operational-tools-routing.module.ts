@@ -12,18 +12,8 @@ const routes: Routes = [
         path: '',
         loadChildren: () =>
           import('./rirs/rirs.module').then((m) => m.RIRSModule),
-      },
-      {
-        path: '',
-
-        loadChildren: () => import('./mwa/mwa.module').then((m) => m.MWAModule),
-      },
-      {
-        path: '',
-
-        loadChildren: () =>
-          import('./stop-card/stop-card.module').then((m) => m.StopCardModule),
-      },
+      }    
+      
     ],
   },
 ];

@@ -1,1 +1,143 @@
-incident details
+<div id="container" *ngIf="incident">
+    <div class="row referenceAP">
+        <div class="col d-flex reference">
+            <div class="col-5">
+                <h3>Incident reference:</h3>
+            </div>
+            <div class="col" style="color: rgb(6, 176, 243);">
+                <h3>{{ incident.reference }}</h3>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col d-flex date">
+            <div class="col-3">
+                <h3>Date:</h3>
+            </div>
+            <div class="col">
+                <h4>{{ incident.date | date: 'short'}}</h4>
+            </div>
+        </div>
+        <div class="col d-flex reportor">
+            <div class="col-4">
+                <h3>Reported by:</h3>
+            </div>
+            <div class="col">
+                <h4>{{ incident.reported_by }}</h4>
+            </div>
+        </div>
+        <div class="col d-flex department">
+            <div class="col-4">
+                <h3>Department:</h3>
+            </div>
+            <div class="col">
+                <h4>{{ incident.department }}</h4>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col injury">
+            <div class="col d-flex">
+                <div class="col-6">
+                    <h3>Injury:</h3>
+                </div>
+                <div class="col">
+                    <h4>{{ incident.injury }}</h4>
+                </div>
+            </div>
+            <div class="col d-flex">
+                <div class="col-6">
+                    <h3>Total injured:</h3>
+                </div>
+                <div class="col">
+                    <h4>{{ incident.totalInjuries }}</h4>
+                </div>
+            </div>
+            <div class="col d-flex">
+                <div class="col-6">
+                    <h3>Employees injured:</h3>
+                </div>
+                <div class="col">
+                    <h4>{{ incident.injuredEmployee }}</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col contamination">
+            <div class="col d-flex">
+                <div class="col-7">
+                    <h3>Contamination:</h3>
+                </div>
+                <div class="col">
+                    <h4> {{ incident.containmentLoss }}</h4>
+                </div>
+            </div>
+            <div class="col d-flex">
+                <div class="col-7">
+                    <h3>Quantity:</h3>
+                </div>
+                <div class="col">
+                    <h4>{{ incident.quantityLoss }} cubic meter</h4>
+                </div>
+            </div>
+            <div class="col d-flex">
+                <div class="col-7">
+                    <h3>Contaminated envirenment:</h3>
+                </div>
+                <div class="col">
+                    <h4>{{ incident.contaminatedEnvironment }}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col material_loss">
+            <div class="col d-flex">
+                <div class="col-5">
+                    <h3>Material loss:</h3>
+                </div>
+                <div class="col">
+                    <h4>{{ incident.materialLoss }}</h4>
+                </div>
+            </div>
+            <div class="col d-flex">
+                <div class="col-5">
+                    <h3>Damaged Equipment:</h3>
+                </div>
+                <div class="col">
+                    <h4> {{ incident.damagedEquipment }}</h4>
+                </div>
+            </div>
+            <div class="col d-flex">
+                <div class="col-5">
+                    <h3>Estimated loss:</h3>
+                </div>
+                <div class="col">
+                    <h4>{{ incident.estimatedLoss }} $</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col d-flex action_plan">
+            <div class="col-3">
+                <h3>Action Plan:</h3>
+            </div>
+            <div class="col">
+                <h4>{{ incident.actionPlan }}</h4>
+            </div>
+        </div>
+    </div>
+    <div class="row description">
+        <h3>Incident description:</h3>
+
+        <p>{{ incident.description }}</p>
+    </div>
+
+    <div class="d-flex justify-content-center mt-2">
+        <button mat-flat-button color="primary" style="margin-right: 10px">
+            <a [routerLink]="['/pages/incidents']">Back</a>
+        </button>
+        <button mat-flat-button color="warn" printSectionId="container" ngxPrint>
+            print
+        </button>
+    </div>
+</div>

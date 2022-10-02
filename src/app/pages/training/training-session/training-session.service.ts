@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { TrainingSession } from './training-session';
 
 @Injectable({
   providedIn: 'root'
@@ -19,5 +20,8 @@ export class TrainingSessionService {
   }
   deleteTrainingSession(id:number){
     return this.http.delete<any>('http://localhost:3000/trainingSessions/'+id)
+  }
+  getTrainingSessionById(id:string){
+    return this.http.get<TrainingSession>('http://localhost:3000/trainingSessions/'+id);
   }
 }

@@ -1,1 +1,61 @@
-<p>employee-details works!</p>
+<div id="container" *ngIf="employee">
+  <div class="row referenceAP">
+    <div class="col-6 d-flex employeeInfo">
+      <div class="col-4">
+        <div class="imageEmployee">
+          <img src="assets/img/yassine.png" alt="" />
+        </div>
+      </div>
+      <div class="col">
+        <h2>{{ employee.name }}</h2>
+        <h4>Matricule:{{ employee.matricule }}</h4>
+        <h4>Post:{{ employee.role }}</h4>
+        <h4>Department:{{ employee.department }}</h4>
+      </div>
+    </div>
+  </div>
+  <div class="row stat">
+    <div class="col d-flex incidents">
+      <div class="col-2">
+        <h3>Incidents:</h3>
+      </div>
+      <div class="col">
+        <ul *ngFor="let incident of filterIncidents">
+          <li>{{ incident.reference }}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col d-flex rirs">
+      <div class="col-2">
+        <h3>RIRS:</h3>
+      </div>
+      <div class="rirsList">
+        <ul *ngFor="let rirs of filterRirs">
+          <li>
+            {{ rirs.reference }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row actions">
+    <div class="col d-flex actionsList">
+      <div class="col-3">
+        <h3>Corrective Actions:</h3>
+      </div>
+      <div class="col">
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="d-flex justify-content-center mt-2">
+    <button mat-flat-button color="primary" style="margin-right: 10px">
+      <a [routerLink]="['/pages/employees']">Back</a>
+    </button>
+    <button mat-flat-button color="warn" printSectionId="container" ngxPrint>
+      print
+    </button>
+  </div>
+</div>

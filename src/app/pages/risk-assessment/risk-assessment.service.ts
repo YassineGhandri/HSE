@@ -22,4 +22,7 @@ export class RiskAssessmentService {
   deleteRiskAssessment(id:number){
     return this.http.delete<any>('http://localhost:3000/risk_assessment/'+id)
   }
+  getRiskAssessmentById(id:string):Observable<RiskAssessment>{
+    return this.http.get<RiskAssessment>('http://localhost:3000/risk_assessment/'+id);
+  }
 }

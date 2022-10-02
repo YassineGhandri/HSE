@@ -1,0 +1,21 @@
+.dangerIndice {
+    font-size: 300%;
+    color: red;
+    text-align: center;
+}
+
+.bestIndice {
+    font-size: 300%;
+    color: green;
+    text-align: center;
+}
+
+.card-header {
+    background-color: white;
+
+}
+
+.card-category {
+    font-size: 1.1rem;
+    margin-left: 10px;
+}

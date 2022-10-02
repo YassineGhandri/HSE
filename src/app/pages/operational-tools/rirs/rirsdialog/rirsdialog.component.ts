@@ -11,6 +11,7 @@ import { RIRSService } from '../rirs.service';
   styleUrls: ['./rirsdialog.component.css'],
 })
 export class RIRSDialogComponent implements OnInit {
+  
   rirsForm!: FormGroup;
   Actionbtn = 'Save';
   employees:Employee[]=[];
@@ -31,6 +32,7 @@ export class RIRSDialogComponent implements OnInit {
 
     this.rirsForm = this.formBuilder.group({
       reference: ['', Validators.required],
+      status: ['', Validators.required],
       date: ['', Validators.required],
       site: ['', Validators.required],
       initiator: ['', Validators.required],

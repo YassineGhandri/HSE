@@ -1,1 +1,61 @@
-<p>training-session-details works!</p>
+<div id="container" *ngIf="trainingSession">
+        <div class="row referenceAP">
+                <div class="col-6 d-flex reference">
+                        <div class="col-7">
+                                <h3>Training Session Reference:</h3>
+                        </div>
+                        <div class="col">
+                                <h4>{{ trainingSession.reference }}</h4>
+                        </div>
+                </div>
+
+                <div class="col-6 d-flex subject">
+                        <div class="col-7">
+                                <h3>Training Session subject:</h3>
+                        </div>
+                        <div class="col">
+                                <h4>{{ trainingSession.subject }}</h4>
+                        </div>
+                </div>
+        </div>
+        <div class="row">
+                <div class="col d-flex date">
+                        <div class="col-3">
+                                <h3>Session Date:</h3>
+                        </div>
+                        <div class="col">
+                                <h4>{{ trainingSession.date | date: "shortDate" }}</h4>
+                        </div>
+                </div>
+
+                <div class="col d-flex center">
+                        <div class="col-4">
+                                <h3>Center:</h3>
+                        </div>
+                        <div class="col">
+                                <h4>{{ trainingSession.center }}</h4>
+                        </div>
+                </div>
+        </div>
+        <div class="row">
+                <div class="col participants">
+                        <div class="col d-flex">
+                                <div class="col-2">
+                                        <h3>Participants:</h3>
+                                </div>
+                                <div class="col">
+                                        <h4>{{ trainingSession.participants }}</h4>
+                                </div>
+                        </div>
+                </div>
+        </div>
+
+        <div class="d-flex justify-content-center mt-2">
+                <button mat-flat-button color="primary" style="margin-right: 10px">
+                        <a [routerLink]="['/pages/permit_works']">Back</a>
+                </button>
+                <button mat-flat-button color="warn" printSectionId="container" ngxPrint>
+                        print
+                </button>
+        </div>
+</div>

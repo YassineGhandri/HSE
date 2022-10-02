@@ -10,6 +10,8 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from './material/material/material.module';
 import { SharedModule } from './shared/shared.module';
 import { SessionsModule } from './sessions/sessions.module';
+import {NgxPrintModule} from 'ngx-print';
+
 
 
 
@@ -29,6 +31,8 @@ import { SessionsModule } from './sessions/sessions.module';
     MaterialModule,   
     SessionsModule,
     SharedModule,
+    NgxPrintModule
+    
   
    
   ],

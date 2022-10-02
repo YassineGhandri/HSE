@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { PermitWork } from './permit-work';
 
 @Injectable({
   providedIn: 'root'
@@ -21,4 +22,7 @@ export class PermitWorkService {
     return this.http.delete<any>('http://localhost:3000/permit_work/'+id)
   }
 
+  getPWById(id:string){
+    return this.http.get<PermitWork>('http://localhost:3000/permit_work/'+id);
+  }
 }

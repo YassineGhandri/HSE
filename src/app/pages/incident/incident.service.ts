@@ -8,6 +8,7 @@ import { Incident } from './incident';
 export class IncidentService {
 
   constructor(private http:HttpClient) { }
+
   postIncident(data:any){
     return this.http.post<any>('http://localhost:3000/incident/',data);
   }
@@ -20,4 +21,11 @@ export class IncidentService {
   deleteIncident(id:number){
     return this.http.delete<any>('http://localhost:3000/incident/'+id)
   }
+
+  getIncidentById(id:string){
+   
+    return this.http.get<Incident>('http://localhost:3000/incident/'+id);
+  }
+
+  
 }

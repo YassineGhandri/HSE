@@ -28,6 +28,8 @@ export class IncidentDialogComponent implements OnInit {
     private dialogRef:MatDialogRef<IncidentDialogComponent>,) { }
 
   ngOnInit(): void {
+
+    
     this.employeeService.getEmployee().subscribe({
       next:(res) => {
       this.employees = res;}});
@@ -43,14 +45,14 @@ export class IncidentDialogComponent implements OnInit {
         description:['',Validators.required],
         reported_by:['',Validators.required],
         injury:['',Validators.required],
-        TotalInjuries:[''],
+        totalInjuries:[''],
         injuredEmployee:[''],
         containmentLoss:['',Validators.required],
         quantityLoss:[''],
         contaminatedEnvironment:[''],
         materialLoss:['',Validators.required],
-        DamagedEquipment:[''],
-        EstimatedLoss:[''],
+        damagedEquipment:[''],
+        estimatedLoss:[''],
         actionPlan:['',Validators.required],
       });
 

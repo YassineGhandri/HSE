@@ -1,24 +1,29 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { RiskAssessment } from '../risk-assessment';
 import { RiskAssessmentService } from '../risk-assessment.service';
 
 @Component({
   selector: 'app-risk-assessment-details',
   templateUrl: './risk-assessment-details.component.html',
-  styleUrls: ['./risk-assessment-details.component.css']
+  styleUrls: ['./risk-assessment-details.component.css'],
 })
 export class RiskAssessmentDetailsComponent implements OnInit {
+  risk_assessment!: RiskAssessment;
 
-  risk_assessments:RiskAssessment[]=[];
-
-  constructor(private riskAssessmentService:RiskAssessmentService) { }
+  constructor(
+    private riskAssessmentService: RiskAssessmentService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
-    this.riskAssessmentService.getRiskAssessment().subscribe({
+
+    const id=this.route.snapshot.paramMap.get('id')||'';
+
+    this.riskAssessmentService.getRiskAssessmentById(id).subscribe({
       next: (res) => {
-        this.risk_assessments = res;
+        this.risk_assessment = res;
       },
     });
-
-}
+  }
 }

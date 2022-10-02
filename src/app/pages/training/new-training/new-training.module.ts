@@ -3,17 +3,19 @@ import { CommonModule } from '@angular/common';
 import { NewTrainingComponent } from './new-training/new-training.component';
 import { RouterModule, Routes } from '@angular/router';
 import { TrainingDialogComponent } from './training-dialog/training-dialog.component';
-import { TrainingDetailsComponent } from './training-details/training-details.component';
 import { MaterialModule } from 'src/app/material/material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 
-const routes:Routes=[{path:'newTrainings',component:NewTrainingComponent}]
+const routes: Routes = [
+  { path: 'newTrainings', component: NewTrainingComponent }
+  
+];
 
 @NgModule({
   declarations: [
     NewTrainingComponent,
     TrainingDialogComponent,
-    TrainingDetailsComponent
+   
   ],
   imports: [
     CommonModule,
@@ -21,7 +23,6 @@ const routes:Routes=[{path:'newTrainings',component:NewTrainingComponent}]
     ReactiveFormsModule,
     RouterModule.forChild(routes),
   ],
-  exports:[RouterModule],
+  exports: [RouterModule],
 })
-export class NewTrainingModule { }
-
+export class NewTrainingModule {}

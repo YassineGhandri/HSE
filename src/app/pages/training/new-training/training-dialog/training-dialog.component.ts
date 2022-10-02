@@ -34,9 +34,8 @@ export class TrainingDialogComponent implements OnInit {
     this.trainingForm = this.formBuilder.group({
       reference: ['', Validators.required],
       title: ['', Validators.required],
-      validity: ['', Validators.required],
-      necessity: ['', Validators.required],
-      department: [''],
+      validity: ['', Validators.required],     
+      department: ['',Validators.required],
       comment: ['', Validators.required],
     });
     if (this.editData) {

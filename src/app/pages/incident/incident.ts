@@ -1,20 +1,21 @@
 import { Employee } from "../employee/employee";
 import { IncidentComponent } from "./incident.component";
 
-export interface Incident {
-    id:number;
+export interface Incident {  
+   
     reference:string;
     date:Date;
-    zone:String;
-    description:String;
-    reportor_by:Employee;
+    department:string;
+    description:string;
+    reported_by:string;
     injury:boolean;
-    injuredEmployee:Employee[];
+    totalInjuries:number;
+    injuredEmployee:string[];
     containmentLoss:boolean;
     quantityLoss:number;
-    contaminatedEnvironment:String;
-    materialLoss:Boolean;
-    damagedEquipment:String;//it should be converted to list
+    contaminatedEnvironment:string;
+    materialLoss:boolean;
+    damagedEquipment:string;
     estimatedLoss:number;
     actionPlan:String;
 }

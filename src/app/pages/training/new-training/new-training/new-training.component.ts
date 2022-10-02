@@ -4,7 +4,6 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { NewTrainingService } from '../new-training.service';
-import { TrainingDetailsComponent } from '../training-details/training-details.component';
 import { TrainingDialogComponent } from '../training-dialog/training-dialog.component';
 
 @Component({
@@ -14,7 +13,8 @@ import { TrainingDialogComponent } from '../training-dialog/training-dialog.comp
 })
 export class NewTrainingComponent implements OnInit {
 
-  displayedColumns: string[] = ['reference','title', 'validity', 'action',];
+  displayedColumns: string[] = ['reference','title', 'validity','department','action'];
+  
    
   dataSource!: MatTableDataSource<any>;
 
@@ -38,16 +38,7 @@ export class NewTrainingComponent implements OnInit {
       })
 
   }
-  openDetails() {    
-    this.dialog.open(TrainingDetailsComponent, {
-      width:'600px',
-    }).afterClosed().subscribe(val=>
-      {
-        if(val==='save')
-        this.getAlltraining();
-      })
-
-  }
+ 
   getAlltraining(){
     this.trainingService.getTraining().subscribe({
       next:(res)=>{        

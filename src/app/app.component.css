@@ -52,7 +52,7 @@ img
   color: black;
 }
 footer{
-  margin-top: 50px;
+  margin-top: 10px;
   padding-top: 10px;    
   background-color: #002838;
   color: white;
@@ -61,7 +61,7 @@ footer{
   
   display: flex;
   justify-content: space-between;
-  margin: 30px 150px;
+  margin: 5px 150px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .footer-top-h1{

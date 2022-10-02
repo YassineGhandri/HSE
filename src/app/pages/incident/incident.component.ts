@@ -71,7 +71,7 @@ export class IncidentComponent implements OnInit {
   deleteIncident(id:number){
     this.incidentService.deleteIncident(id).subscribe({
       next:(res)=>{
-        alert('incident deleted');
+        
         this.getAllIncident();
       },
       error:()=>{
@@ -86,7 +86,7 @@ export class IncidentComponent implements OnInit {
     }).afterClosed().subscribe(val=>
       {        
         this.getAllIncident();
-        alert('incident updated');
+        
       }   
       )
   }

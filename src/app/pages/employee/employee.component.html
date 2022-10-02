@@ -13,7 +13,7 @@
          
       <ng-container matColumnDef="matricule">
         <th mat-header-cell *matHeaderCellDef> Matricule </th>
-        <td mat-cell *matCellDef="let element"> {{element.matricule}} </td>
+        <td mat-cell *matCellDef="let element"><a [routerLink]="[element.id]">{{element.matricule}} </a> </td>
       </ng-container>  
     
       <ng-container matColumnDef="name">

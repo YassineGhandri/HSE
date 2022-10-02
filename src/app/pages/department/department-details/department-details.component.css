@@ -6,7 +6,13 @@
     border: solid 1px black;
 }
 
-.row {
+
+.diagram {
+    border: solid 1px black;
+    padding-top: 20px;
+}
+
+.referenceAP {
     border: solid 1px black;
     border-bottom: none;
 }
@@ -15,24 +21,20 @@ h4 {
     color: rgb(6, 176, 243);
 }
 
-.reference,
-.responsible,
-.department,
-.operation,
-.risks {
+
+
+.reference {
 
     padding-top: 20px;
     border-right: black solid 1px;
 }
 
-.assistant {
+.total {
     padding-top: 20px;
 }
 
-.details {
-    border-bottom: solid 1px black;
-}
-
-.actions {
-    padding-top: 20px;
+.diagramstyle {
+    width: 95%;
+    height: 500px;
+    background-color: red;
 }

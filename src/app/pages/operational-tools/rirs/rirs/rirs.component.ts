@@ -14,10 +14,9 @@ import { RIRSDialogComponent } from '../rirsdialog/rirsdialog.component';
 })
 export class RIRSComponent implements OnInit {
 
-  displayedColumns: string[] = ['reference','status','initiator','site','description','action','validation'];
+  displayedColumns: string[] = ['reference','status','initiator','site','description','action'];
 
-  status='new';
-  statusStyle = 'status-default';
+ 
 
   
   dataSource!: MatTableDataSource<any>;
@@ -73,16 +72,7 @@ export class RIRSComponent implements OnInit {
         this.getAllRirs();
     })
   }
-  valid(row: any) { 
-    
-      if(this.statusStyle == 'status-change') {
-        this.statusStyle = 'status-default';
-        this.status='new';
-      } else {
-        this.statusStyle = 'status-change';
-        this.status='valid';
-      }    
-  } 
+
   deleteRirs(id: number) {
     this.rirsService.deleteRirs(id)
       .subscribe({
