@@ -16,7 +16,7 @@ export class PermitWorkComponent implements OnInit {
 
   permitStatus='New';
 
-  displayedColumns: string[] = ['reference', 'type', 'object','initiator','status','action'];  
+  displayedColumns: string[] = ['reference', 'type', 'object','initiator','action'];  
   dataSource!: MatTableDataSource<any>;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
@@ -92,6 +92,13 @@ export class PermitWorkComponent implements OnInit {
 
       }
     })
+  }
+  closePW(row:any){
+    row.status='close';
+    this.PWservice.putPW(row, row.id).subscribe({
+      next: (res) => {
+        alert('permit work closed');
+      }});
   }
  
 }

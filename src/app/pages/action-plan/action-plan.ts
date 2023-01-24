@@ -1,8 +1,10 @@
 import { Employee } from "../employee/employee";
+import { CorrectiveAction } from "../corrective-actions/corrective-action";
 
 export interface ActionPlan {
+    source:string;
+    sourceRef:string,   
     reference:string;
-    progress:number;
     responsible:Employee;
-    corrective_actions:string;
+    corrective_actions:CorrectiveAction[];     
 }

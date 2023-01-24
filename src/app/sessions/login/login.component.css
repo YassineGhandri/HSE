@@ -1,33 +1,26 @@
-.content{    
-  background-color: rgb(158, 207, 226);
-  background-size: cover;
-  background-size: 100%;
-  text-align: center;
- padding-top: 20px;
- height: 620px;
-}
-  .mat-form-field{
-    width: 100%;
-    background-color: white;
-   margin-top: 10px;
-    
-  }
+.mat-form-field {
+  width: 90%;
+  background-color: white;
+  margin-top: 10px;
+ 
   
-  form{
-    width: 100%;
-    margin: 0 auto;
+}
+form {
+  width: 100%;
+  margin: 0 auto;
+}
+.login_btn {  
+  background-color: rgb(175, 66, 248);
+  color: white;
+  border-radius: 10px; 
+  width: 50%;
+  margin:5px 60px;
+}
+.card {
+  text-align: center;
+  padding-left: 10px;
+    display: block;
+    width: 70%;
+    border-radius: 0;
+  
   }
-  button{
-      margin: 20px;
-      width: 70px;
-    }
-    .card{
-      text-align: center;
-      display:block;
-      margin-top:150px;     
-      margin-left: auto;
-      margin-right: auto;
-      width: 40%;
-      
-      
-    }

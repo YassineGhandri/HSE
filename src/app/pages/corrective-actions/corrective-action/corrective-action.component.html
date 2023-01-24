@@ -1,0 +1,47 @@
+<h1>Corrective Action </h1>
+<div mat-dialog-content>
+    <form [formGroup]="CAForm">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Reference</mat-label>
+            <input formControlName="referenceAction" matInput placeholder="reference" />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>description</mat-label>
+            <input formControlName="descriptionAction" matInput placeholder="description" />
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Department</mat-label>
+            <mat-select formControlName="departmentAction" name="department">
+                <mat-option *ngFor="let department of departments" [value]="department.name">
+                    {{ department.name }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Start Date</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="startDate" />
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Progress</mat-label>
+            <input formControlName="progressAction" matInput placeholder="progress" />
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>End Date</mat-label>
+            <input matInput [matDatepicker]="picker1" formControlName="endDate" />
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
+
+
+
+    </form>
+</div>
+<div mat-dialog-actions [align]="'end'">
+    <button mat-raised-button color="primary" (click)="addCA()">
+        {{ Actionbtn }}
+    </button>
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+</div>

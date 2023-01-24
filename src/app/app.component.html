@@ -1,4 +1,4 @@
-<mat-toolbar style="border-bottom: 0.05px rgb(223, 221, 221) solid">
+<mat-toolbar class="toolbar" style="border-bottom: 0.05px rgb(223, 221, 221) solid">
   <div class="logo">
     <img
       src="https://aswar-albinaa.com/wp-content/uploads/2020/11/HSE-1.png"
@@ -7,9 +7,9 @@
   </div>
   <div class="menu">
     <div class="mainMenu">
-      <a [routerLink]="['./shared/home']" class="item">Home</a>
-      <a [routerLink]="['./shared/about']" class="item">About</a>
-      <a [routerLink]="['./pages']" class="item">Features</a>
+      <a [routerLink]="['../home']" class="item">Home</a>
+      <a [routerLink]="['../about']" class="item">About</a>
+      <a [routerLink]="['./pages/dashboard']" class="item">Features</a>
       <a [routerLink]="['./pages/page']" class="item">Documentations</a>
     </div>
     <div class="access">
@@ -18,14 +18,15 @@
       <a
         [routerLink]="['./sessions/login']"
         class="sign"
-        *ngIf="authService.isLogged"
+        *ngIf="!authService.isLoggedIn"
         >Sign in</a
       >
 
       <a
         [routerLink]="['./sessions/login']"
         class="sign"
-        *ngIf="!authService.isLogged"
+        *ngIf="authService.isLoggedIn"
+        (click)="logout()"
         >Sign out</a
       >
       
@@ -53,16 +54,15 @@
         <li>Incidents management</li>
         <li>Permit work manegement</li>
         <li>Trainings</li>
-        <li>Idividual Protection Equipments</li>
-        <li>Operation tools</li>
+      
       </ul>
     </div>
     <div>
       <h1 class="footer-top-h1">Links</h1>
-      <ul>
-        <li><a href="https://www.facebook.com/yassine.ghandri.58">Facebook</a> </li>
-        <li><a href="https://www.linkedin.com/in/yassine-ghandri-3641b3249/">linkedin</a> </li>
-        <li><a href="https://github.com/Yassine-Ghandri/HSE">Github</a> </li>
+      <ul class="media">
+        <li><a class="mediaItem" href="https://www.facebook.com/yassine.ghandri.58">Facebook</a> </li>
+        <li><a class="mediaItem" href="https://www.linkedin.com/in/yassine-ghandri-3641b3249/">linkedin</a> </li>
+        <li><a class="mediaItem" href="https://github.com/Yassine-Ghandri/HSE">Github</a> </li>
       </ul>
     </div>
   </div>

@@ -1,78 +1,19 @@
 {
   "Risks": [],
-  "risk_assessment": [
-    {
-      "reference": "RA-2022/001",
-      "responsible": "Moez Ezzine",
-      "assistant": "Yassine Ghandri",
-      "department": "Sulfuric",
-      "operation": "heat exchanger maitenance",
-      "risks": "Acid leackage",
-      "id": 1
-    },
-    {
-      "reference": "RA-2022/002",
-      "responsible": "Moez Ezzine",
-      "assistant": "Yassine Ghandri",
-      "department": "Sulfuric",
-      "operation": "Reactor maintenance",
-      "risks": "Gas Leack",
-      "id": 2
-    },
-    {
-      "reference": "RA-2022/003",
-      "responsible": "Med Ali Riahi",
-      "assistant": "Hajjej Hbib",
-      "department": "Sulfuric",
-      "operation": "Stack paint",
-      "risks": "Acid leackage",
-      "id": 3
-    },
-    {
-      "reference": "RA-2022/004",
-      "responsible": "Yassine Ghandri",
-      "assistant": "Yassine Ghandri",
-      "department": "production",
-      "operation": "lifting",
-      "risks": "shutdown",
-      "id": 4
-    },
-    {
-      "reference": "RA-2022/005",
-      "responsible": "Yassine Ghandri",
-      "assistant": "Moez Ezzine",
-      "department": "sulfurique",
-      "operation": "lifting",
-      "risks": "shutdown",
-      "id": 5
-    },
-    {
-      "reference": "RA-2022/006",
-      "responsible": "Moez Ezzine",
-      "assistant": "Yassine Ghandri",
-      "department": "S",
-      "operation": "S",
-      "risks": "S",
-      "id": 6
-    }
-  ],
+  "risk_assessment": [],
   "employee": [
     {
       "matricule": "92486",
       "name": "Moez Ezzine",
-      "role": "Chef Service",
-      "department": [
-        "Sulf-1&2"
-      ],
+      "role": "Cheif",
+      "department": "Sulf-1&2",
       "id": 2
     },
     {
       "matricule": "92664",
       "name": "Yassine Ghandri",
-      "role": "Ingenieur",
-      "department": [
-        "Sulf-1&2"
-      ],
+      "role": "Engineer",
+      "department": "Sulf-1&2",
       "id": 3
     },
     {
@@ -87,38 +28,23 @@
     {
       "matricule": "3025",
       "name": "Rahmani Abdelkarim",
-      "role": "Chef de poste",
-      "department": [
-        "Sulf-1&2"
-      ],
+      "role": "Team Leader",
+      "department": "Sulf-1&2",
       "id": 8
     },
     {
       "matricule": "87455",
       "name": "Elbach Naseur",
-      "role": "Operateur",
-      "department": [
-        "Sulf-1&2"
-      ],
+      "role": "Operator",
+      "department": "Sulf-1&2",
       "id": 12
     },
     {
       "matricule": "91265",
       "name": "Lotfi Dhaoudi",
-      "role": "Ouvrier",
-      "department": [
-        "Sulf-1&2"
-      ],
+      "role": "Worker",
+      "department": "Sulf-1&2",
       "id": 13
-    },
-    {
-      "matricule": "91266",
-      "name": "Belhsan Abdelhamid",
-      "role": "Operateur",
-      "department": [
-        "Sulf-1&2"
-      ],
-      "id": 14
     },
     {
       "matricule": "92669",
@@ -132,19 +58,15 @@
     {
       "matricule": "2000",
       "name": "khnissi",
-      "role": "superviseur",
-      "department": [
-        "BM"
-      ],
+      "role": "Supervisor",
+      "department": "BM",
       "id": 21
     },
     {
       "matricule": "92690",
-      "name": "Anwar Mahfoudh",
+      "name": "Boughanmi Hassan",
       "role": "engineer",
-      "department": [
-        "mécanique"
-      ],
+      "department": "MEC",
       "id": 22
     },
     {
@@ -159,28 +81,22 @@
     {
       "matricule": "2599",
       "name": "Khalifa Turki",
-      "role": "Superviseur",
-      "department": [
-        "Elec & instrum"
-      ],
+      "role": "Supervisor",
+      "department": "Elec & instrum",
       "id": 25
     },
     {
       "matricule": "92693",
       "name": "fathi Ghali",
       "role": "Gestionnaire",
-      "department": [
-        "Env"
-      ],
+      "department": "Env",
       "id": 26
     },
     {
       "matricule": "92694",
       "name": "Sami Marzougui",
       "role": "Gestionnaire",
-      "department": [
-        "SAF"
-      ],
+      "department": "SAF",
       "id": 27
     },
     {
@@ -200,146 +116,246 @@
         "SULF 3"
       ],
       "id": 29
+    },
+    {
+      "matricule": "92660",
+      "name": "Radhouen Saadi",
+      "role": "Cheif",
+      "department": [
+        "GS"
+      ],
+      "id": 30
+    },
+    {
+      "matricule": "2550",
+      "name": "Mesbah Ojba",
+      "role": "Supervisor",
+      "department": "GS",
+      "id": 31
+    },
+    {
+      "matricule": "92644",
+      "name": "Kacem Mokded",
+      "role": "Cheif",
+      "department": [
+        "SULF 3"
+      ],
+      "id": 32
+    },
+    {
+      "matricule": "2560",
+      "name": "Monji ",
+      "role": "Supervisor",
+      "department": "MEC",
+      "id": 33
+    },
+    {
+      "matricule": "5000",
+      "name": "Lotfi Taba",
+      "role": "Welder",
+      "department": "MEC",
+      "id": 34
+    },
+    {
+      "matricule": "6000",
+      "name": "Salah",
+      "role": "Mechanic",
+      "department": "MEC",
+      "id": 35
+    },
+    {
+      "matricule": "7000",
+      "name": "Boubaker Assadi",
+      "role": "Electrician",
+      "department": "Elec & instrum",
+      "id": 36
+    },
+    {
+      "matricule": "92660",
+      "name": "Dadi Hsen",
+      "role": "Engineer",
+      "department": "util 1&2",
+      "id": 37
+    },
+    {
+      "matricule": "2600",
+      "name": "Trabelsi Hedi",
+      "role": "Supervisor",
+      "department": "util 1&2",
+      "id": 38
+    },
+    {
+      "matricule": "92640",
+      "name": "Mohamed Ali Hfaiedh",
+      "role": "Engineer",
+      "department": "util 1&2",
+      "id": 39
     }
   ],
   "incident": [
     {
-      "reference": "I-2022/002",
-      "date": "2022-08-01T23:00:00.000Z",
-      "department": "SULF 3",
-      "description": "acid leack",
+      "status": "New",
+      "reference": "I-001",
+      "date": "2022-07-31T22:00:00.000Z",
+      "department": "Sulf-1&2",
+      "description": "Operator Shutdown from towr gride",
       "reported_by": "Yassine Ghandri",
       "injury": "Yes",
-      "totalInjuries": 3,
+      "totalInjuries": 1,
       "injuredEmployee": [
-        "Yassine Ghandri",
-        "Med Ali Riahi",
-        "Rahmani Abdelkarim"
+        "Lotfi Dhaoudi"
       ],
-      "containmentLoss": "Yes",
-      "quantityLoss": "1000",
-      "contaminatedEnvironment": "earth",
-      "materialLoss": "Yes",
-      "damagedEquipment": "transfo",
-      "estimatedLoss": 150000,
-      "actionPlan": "AP-008",
-      "id": 2
-    },
-    {
-      "reference": "I-2022/003",
-      "date": "2022-08-04T23:00:00.000Z",
-      "department": "phos1",
-      "description": "sulfuric acid leack",
-      "reported_by": "Moez Ezzine",
-      "injury": "No",
-      "totalInjuries": "",
-      "injuredEmployee": [],
       "containmentLoss": "No",
       "quantityLoss": "",
-      "contaminatedEnvironment": "sea",
+      "contaminatedEnvironment": "",
       "materialLoss": "No",
       "damagedEquipment": "",
       "estimatedLoss": "",
-      "actionPlan": "AP-005",
+      "id": 1
+    },
+    {
+      "status": "New",
+      "reference": "I-002",
+      "date": "2022-09-07T22:00:00.000Z",
+      "department": "SULF 3",
+      "description": "Iregtion of acid ion the hand of operator",
+      "reported_by": "Kacem Mokded",
+      "injury": "Yes",
+      "totalInjuries": 1,
+      "injuredEmployee": [
+        "elyes zarrouk"
+      ],
+      "containmentLoss": "Yes",
+      "quantityLoss": "10",
+      "contaminatedEnvironment": "earth",
+      "materialLoss": "Yes",
+      "damagedEquipment": "E 35005",
+      "estimatedLoss": 3000,
+      "id": 2
+    },
+    {
+      "status": "New",
+      "reference": "I-003",
+      "date": "2022-09-21T22:00:00.000Z",
+      "department": "Sulf-1&2",
+      "description": "heat exchanger E2501 dropdown ",
+      "reported_by": "Yassine Ghandri",
+      "injury": "No",
+      "totalInjuries": "",
+      "injuredEmployee": "",
+      "containmentLoss": "No",
+      "quantityLoss": "",
+      "contaminatedEnvironment": "",
+      "materialLoss": "Yes",
+      "damagedEquipment": "E2501",
+      "estimatedLoss": 700000,
       "id": 3
     },
     {
-      "reference": "I-2022/004",
-      "date": "2022-08-05T23:00:00.000Z",
-      "department": "phos1",
-      "description": "fire",
-      "reported_by": "Moez Ezzine",
-      "injury": "Yes",
-      "totalInjuries": 2,
-      "injuredEmployee": [
-        "Med Ali Riahi",
-        "Lotfi Dhaoudi"
-      ],
+      "status": "New",
+      "reference": "I-004",
+      "date": "2022-10-11T22:00:00.000Z",
+      "department": "GS",
+      "description": "Fire in molten sulphur tank TK2501B",
+      "reported_by": "Radhouen Saadi",
+      "injury": "No",
+      "totalInjuries": "",
+      "injuredEmployee": "",
       "containmentLoss": "Yes",
-      "quantityLoss": "1000",
-      "contaminatedEnvironment": "sea",
+      "quantityLoss": "150",
+      "contaminatedEnvironment": "air",
       "materialLoss": "Yes",
-      "damagedEquipment": "motopump",
-      "estimatedLoss": 25000,
-      "actionPlan": "AP-01",
+      "damagedEquipment": "TK2501B",
+      "estimatedLoss": 85000,
       "id": 4
     },
     {
-      "reference": "I-2022/005",
-      "date": "2022-09-07T23:00:00.000Z",
-      "department": "SULF 3",
-      "description": "injury",
-      "reported_by": "Moez Ezzine",
-      "injury": "No",
-      "totalInjuries": null,
-      "injuredEmployee": [],
-      "containmentLoss": "Yes",
-      "quantityLoss": "100",
-      "contaminatedEnvironment": "sea",
-      "materialLoss": "Yes",
-      "damagedEquipment": "towr",
-      "estimatedLoss": 50000,
-      "actionPlan": "AP-005",
+      "status": "New",
+      "reference": "I-005",
+      "date": "2022-09-18T22:00:00.000Z",
+      "department": "MEC",
+      "description": "Brok operator finger ",
+      "reported_by": "Anwar Mahfoudh",
+      "injury": "Yes",
+      "totalInjuries": 1,
+      "injuredEmployee": [
+        "Anwar Mahfoudh"
+      ],
+      "containmentLoss": "No",
+      "quantityLoss": "",
+      "contaminatedEnvironment": "",
+      "materialLoss": "No",
+      "damagedEquipment": "",
+      "estimatedLoss": "",
       "id": 5
+    },
+    {
+      "status": "New",
+      "reference": "I-006",
+      "date": "2022-07-12T22:00:00.000Z",
+      "department": "util 1&2",
+      "description": "Fire in electrical room ",
+      "reported_by": "Dadi Hsen",
+      "injury": "Yes",
+      "totalInjuries": 1,
+      "injuredEmployee": [
+        "Trabelsi Hedi"
+      ],
+      "containmentLoss": "No",
+      "quantityLoss": "",
+      "contaminatedEnvironment": "",
+      "materialLoss": "Yes",
+      "damagedEquipment": "Electrical Transfo",
+      "estimatedLoss": 150000,
+      "id": 6
     }
   ],
   "permit_work": [
     {
-      "reference": "PW-2022/003",
+      "reference": "PW-001",
       "type": "hot",
-      "object": "Welding heat exchanger",
+      "object": "Replacement of duckboard arround T2502",
       "initiator": "Yassine Ghandri",
-      "startDate": "2022-08-02T23:00:00.000Z",
-      "risks": "Acid leackage",
-      "executors": "Med Ali Riahi",
-      "status": "Valid",
-      "id": 6
+      "startDate": "2022-11-09T23:00:00.000Z",
+      "risks": "Material shutdown",
+      "executors": [
+        "Anwar Mahfoudh"
+      ],
+      "status": "close",
+      "id": 1
     },
     {
-      "reference": "PW-2022/004",
-      "type": "hot",
-      "object": "WELDER",
-      "initiator": "Med Ali Riahi",
-      "startDate": "2022-09-07T23:00:00.000Z",
-      "risks": "S",
+      "reference": "P-002",
+      "type": "cold",
+      "object": "Change the perced element of inlet pipe of TK2502A",
+      "initiator": "Anwar Mahfoudh",
+      "startDate": "2022-11-15T23:00:00.000Z",
+      "risks": "Acid spraing, shutdown",
       "executors": [
-        "Rahmani Abdelkarim"
+        "Anwar Mahfoudh"
       ],
-      "status": "Valid",
-      "id": 7
-    },
-    {
-      "reference": "PW-5",
-      "type": "hot",
-      "object": "nn",
-      "initiator": "Lotfi Dhaoudi",
-      "startDate": "2022-09-29T23:00:00.000Z",
-      "risks": "fgdfg",
-      "executors": [
-        "Elbach Naseur"
-      ],
-      "status": "Valid",
-      "id": 8
+      "status": "",
+      "id": 2
     }
   ],
   "action_plan": [],
   "user": [
     {
-      "fullName": "admin",
+      "userName": "admin",
       "email": "admin@hse.com",
       "password": "123456",
       "confirmPassword": "123456",
       "id": 3
     },
     {
-      "fullName": "yassine",
+      "userName": "yassine",
       "email": "yassine@hse.com",
       "password": "123456",
       "confirmPassword": "123456",
       "id": 4
     },
     {
-      "fullName": "moez",
+      "userName": "moez",
       "email": "moez@hse.com",
       "password": "123456",
       "confirmPassword": "123456",
@@ -350,34 +366,26 @@
     {
       "code": "Sulf-1&2",
       "name": "Sulfurique 1&2",
+      "departmentHead": "Moez Ezzine",
+      "secondResponsible": "Yassine Ghandri",
       "total_employee": "18",
       "employees": [
-        "Moez Ezzine",
-        "Yassine Ghandri",
         "Med Ali Riahi",
-        "Hajjej Hbib",
-        "Saoudi Abdessalam",
-        "Alay Naceur",
         "Rahmani Abdelkarim",
-        "Hattab Sahbi",
-        "Ghribi Walid",
-        "Fahmi Amara",
         "Elbach Naseur",
         "Lotfi Dhaoudi",
-        "Belhsan Abdelhamid",
-        "Ali Bouazza",
-        "Rezg Maher",
-        "Agoubi Nizar",
-        "Ben Mbarek NAji"
+        "Belhsan Abdelhamid"
       ],
       "id": 1
     },
     {
       "code": "BM",
       "name": "Bureau de Methode",
+      "departmentHead": "oussama ben Ltaief",
+      "secondResponsible": null,
       "total_employee": "20",
       "employees": [
-        "Oussama Ben Ltaief"
+        "khnissi"
       ],
       "id": 2
     },
@@ -402,28 +410,21 @@
     {
       "code": "GS",
       "name": "Gestion Soufre",
+      "departmentHead": "Radhouen Saadi",
+      "secondResponsible": null,
       "total_employee": "50",
       "employees": [
-        "Hajjej Hbib"
+        "Mesbah Ojba"
       ],
       "id": 5
     },
     {
-      "code": "SULF 3",
-      "name": "Sulfurique 3",
-      "total_employee": "15",
-      "employees": [
-        "Hajjej Hbib"
-      ],
-      "id": 6
-    },
-    {
       "code": "phos 3",
       "name": "phosphorique 3",
+      "departmentHead": "Mounir Belaydi",
+      "secondResponsible": null,
       "total_employee": "20",
-      "employees": [
-        "Lotfi Dhaoudi"
-      ],
+      "employees": [],
       "id": 7
     },
     {
@@ -438,9 +439,11 @@
     {
       "code": "util 1&2",
       "name": "Utilité 1&2",
+      "departmentHead": "Mohamed Ali Hfaiedh",
+      "secondResponsible": "Dadi Hsen",
       "total_employee": "12",
       "employees": [
-        "Rezg Maher"
+        "Trabelsi Hedi"
       ],
       "id": 9
     },
@@ -456,24 +459,33 @@
     {
       "code": "Elec & instrum",
       "name": "Electrique et instrumentation",
-      "total_employee": "30",
+      "departmentHead": null,
+      "secondResponsible": "khalil abdelmoulah",
+      "total_employee": "10",
       "employees": [
-        "Ghribi Walid"
+        "Khalifa Turki",
+        "Boubaker Assadi"
       ],
       "id": 11
     },
     {
-      "code": "mécanique",
+      "code": "MEC",
       "name": "mécanique",
+      "departmentHead": null,
+      "secondResponsible": "Boughanmi Hassan",
       "total_employee": "90",
       "employees": [
-        "Belhsan Abdelhamid"
+        "Monji ",
+        "Lotfi Taba",
+        "Salah"
       ],
       "id": 12
     },
     {
       "code": "SAF",
       "name": "Service administratif",
+      "departmentHead": null,
+      "secondResponsible": "Sami Marzougui",
       "total_employee": "120",
       "employees": [
         "Hattab Sahbi"
@@ -483,6 +495,8 @@
     {
       "code": "Env",
       "name": "Service Envirennement",
+      "departmentHead": "fathi Ghali",
+      "secondResponsible": null,
       "total_employee": "50",
       "employees": [
         "Rahmani Abdelkarim"
@@ -535,42 +549,63 @@
       "id": 3
     }
   ],
-  "IPE": [
+  "correctiveActions": [
     {
-      "type": "Glove",
-      "code": "001",
-      "description": "rien",
+      "referenceAction": "CA-I-001",
+      "descriptionAction": "Repair gride arround absorption towr T2502",
+      "departmentAction": "Sulfurique 1&2",
+      "progressAction": "50",
+      "startDate": "2022-11-09T23:00:00.000Z",
+      "endDate": "2022-11-12T23:00:00.000Z",
       "id": 1
     },
     {
-      "type": "Helmet",
-      "code": "002",
-      "description": "nn",
+      "referenceAction": "CA-I-002",
+      "descriptionAction": "remplacement of heat exchanger calender",
+      "departmentAction": "Sulfurique 3",
+      "progressAction": "0",
+      "startDate": "2022-10-24T22:00:00.000Z",
+      "endDate": "2023-11-09T23:00:00.000Z",
       "id": 2
     },
     {
-      "type": "Mask",
-      "code": "003",
-      "description": "nn",
+      "referenceAction": "CA-I-002",
+      "descriptionAction": "Application of EPI standards",
+      "departmentAction": "Sulfurique 3",
+      "progressAction": "100",
+      "startDate": "2022-10-19T22:00:00.000Z",
+      "endDate": "2022-10-25T22:00:00.000Z",
       "id": 3
     },
     {
-      "type": "Shoes",
-      "code": "004",
-      "description": "nn",
+      "referenceAction": "CA-I-003",
+      "descriptionAction": "Reapir the groud above E2501",
+      "departmentAction": "Sulfurique 1&2",
+      "progressAction": "30",
+      "startDate": "2022-10-17T22:00:00.000Z",
+      "endDate": "2022-12-29T23:00:00.000Z",
       "id": 4
+    },
+    {
+      "referenceAction": "CA-R-005",
+      "descriptionAction": "Repair the inlet pipe of TK2502A",
+      "departmentAction": "mécanique",
+      "progressAction": "0",
+      "startDate": "2022-11-15T23:00:00.000Z",
+      "endDate": "2022-11-15T23:00:00.000Z",
+      "id": 5
     }
   ],
   "RIRS": [
     {
-      "reference": "RIRS-2022/004",
       "status": "Valid",
-      "date": "2022-09-07T23:00:00.000Z",
-      "site": "mec",
-      "initiator": "Moez Ezzine",
+      "reference": "R-2022-001",
+      "date": "2022-11-15T23:00:00.000Z",
+      "department": "Sulfurique 1&2",
+      "initiator": "Yassine Ghandri",
       "priority": "hight",
-      "description": "shutdown",
-      "id": 5
+      "description": "Acid leack above the tank TK2502A",
+      "id": 1
     }
   ],
   "MWA": [
@@ -670,17 +705,6 @@
       "center": "Civil Protection Center",
       "comment": "First session",
       "id": 2
-    },
-    {
-      "reference": "001",
-      "subject": "First Aid",
-      "date": "2022-10-02T23:00:00.000Z",
-      "participants": [
-        "Yassine Ghandri"
-      ],
-      "center": "stir",
-      "comment": "nn",
-      "id": 3
     }
   ],
   "comments": [

@@ -7,6 +7,8 @@ import { AboutComponent } from './about/about.component';
 
 
 
+
+
 @NgModule({
   declarations: [
     HomeComponent,
@@ -18,7 +20,9 @@ import { AboutComponent } from './about/about.component';
     MaterialModule,
     RouterModule.forChild([
       { path: '', redirectTo: 'home', pathMatch: 'full' },  
-      {path:'home', component:HomeComponent},
+      {path:'home',
+     
+       component:HomeComponent},
       {path:'about', component:AboutComponent}
     ]),   
   ]

@@ -11,26 +11,22 @@
         placeholder="Ex. Mia"
         #input
       />
+
+
     </mat-form-field>
     <div class="mat-elevation">
       <table mat-table [dataSource]="dataSource" matSort>
+        <ng-container matColumnDef="sourceRef">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Source</th>
+          <td mat-cell *matCellDef="let row">{{ row.sourceRef }}</td>
+        </ng-container>
         <ng-container matColumnDef="reference">
           <th mat-header-cell *matHeaderCellDef mat-sort-header>Reference</th>
           <td mat-cell *matCellDef="let row"><a [routerLink]="[row.id]">{{ row.reference }}</a></td>
         </ng-container>
         <ng-container matColumnDef="responsible">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header>Responsible</th>
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Coordinator</th>
           <td mat-cell *matCellDef="let row">{{ row.responsible }}</td>
-        </ng-container>
-        <ng-container matColumnDef="corrective_actions">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header>
-            Corrective Actions
-          </th>
-          <td mat-cell *matCellDef="let row">{{ row.corrective_actions }}</td>
-        </ng-container>
-        <ng-container matColumnDef="progress">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header>Progress</th>
-          <td mat-cell *matCellDef="let row">{{ row.progress }}</td>
         </ng-container>
         <ng-container matColumnDef="action">
           <th mat-header-cell *matHeaderCellDef mat-sort-header>Action</th>

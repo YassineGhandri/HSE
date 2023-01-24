@@ -1,4 +1,7 @@
-
+.toolbar {
+  background-color: white;
+  
+}
 
 .logo {
   padding: 10px;
@@ -15,26 +18,27 @@
   width: 80%;
   display: flex;
   justify-content: space-between;
+
 }
 .mainMenu {
 
   display: flex;
-  width: 60%;
+  width: 50%;
   justify-content: space-between;
 }
 
 .item {
   font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   
 }
 
 a {
   text-decoration: none;
-  color: rgb(70, 144, 187);
+  color: rgb(11, 127, 194);
 }
 a:hover {
-  color: rgb(73, 143, 45);
+  color: rgb(13, 14, 13);
 }
 
 img
@@ -52,9 +56,9 @@ img
   color: black;
 }
 footer{
-  margin-top: 10px;
+  
   padding-top: 10px;    
-  background-color: #002838;
+  background-image: linear-gradient(180deg, rgb(89, 127, 209), #03224c);
   color: white;
 }
 .footer-top{
@@ -75,6 +79,10 @@ li{
 list-style: none;
 font-size: 1.1rem;
 margin-top: 3px;
+}
+.mediaItem {
+  text-decoration: none;
+  color: white;
 }
 .copyrigth{
   color: white;

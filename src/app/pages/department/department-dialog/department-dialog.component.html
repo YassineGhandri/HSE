@@ -10,8 +10,20 @@
             <input formControlName='name' matInput placeholder="name" >
           </mat-form-field>
           <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Total Employees</mat-label>
-            <input formControlName='total_employee' matInput placeholder="total_employee" >
+            <mat-label>Department Head</mat-label>
+            <mat-select formControlName='departmentHead'  name="departmentHead" placeholder="Department Head">
+              <mat-option *ngFor="let employee of employees" [value]="employee.name">
+              {{employee.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Second Responsible</mat-label>
+            <mat-select formControlName='secondResponsible'  name="secondResponsible" placeholder="Second Responsible">
+              <mat-option *ngFor="let employee of employees" [value]="employee.name">
+              {{employee.name}}
+              </mat-option>
+            </mat-select>
           </mat-form-field>
           <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Employee</mat-label>
@@ -21,10 +33,14 @@
               </mat-option>
             </mat-select>
           </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Total Employees</mat-label>
+            <input formControlName='total_employee' matInput placeholder="total_employee" >
+          </mat-form-field>           
       </form>
     </div>
     <div mat-dialog-actions [align]="'end'">
-      <button type="submit" mat-raised-button color="primary" >save</button>      
+      <button type="submit" mat-raised-button color="primary" (click)="addDep()" >{{Actionbtn}}</button>      
       <button  mat-raised-button color="warn" mat-dialog-close >Close</button>
     </div>
       

@@ -1,23 +1,46 @@
-<div mat-dialog-content class="content">
-  <mat-card class="card"> 
-        <form [formGroup]="loginForm" >
-            
-          <mat-form-field  >
-                <mat-label>Email</mat-label>
-                <input type="email" matInput formControlName="email" placeholder="Ex. pat@example.com" required>                
-              </mat-form-field>             
-            <mat-form-field >
-                <mat-label>Enter your password</mat-label>
-                <input matInput placeholder="********" formControlName="password" required>                
-            </mat-form-field>
-            
-            
-        </form>
-        <button mat-raised-button color="green" (click)="login()" >login</button>
-        <a routerLink="/signup">New user</a>   
-        
-      </mat-card> 
-      
-</div>
- 
- 
+<mat-card
+  style="
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(149, 128, 175);
+    height: 600px;
+  "
+>
+  <div class="card" style="width: 25%; height: 50%; margin-top: 150px">
+    <form [formGroup]="loginForm">
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input
+          type="text"
+          matInput
+          formControlName="userName"
+          placeholder="Ex. pat@example.com"
+          required
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Enter your password</mat-label>
+        <input
+          matInput
+          placeholder="********"
+          formControlName="password"
+          required
+        />
+      </mat-form-field>
+    </form>
+    <button
+      class="login_btn"
+      mat-raised-button
+      color="green"
+      (click)="loginAccess()"
+      style="border-radius: 10px; width: 50%; margin-top: 25px"
+    >
+      login
+    </button>
+
+    <div style="margin: 20px">
+      <a routerLink="/signup">New user</a>
+    </div>
+  </div>
+</mat-card>

@@ -1,0 +1,62 @@
+.row {
+    border: solid 1px black;
+    border-bottom: none;
+}
+
+h4 {
+    color: rgb(6, 176, 243);
+}
+
+#container {
+    margin: 20px auto;
+    width: 95%;
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: solid 1px black;
+}
+
+.reference {
+
+    padding-top: 20px;
+    border-right: black solid 1px;
+}
+
+.description {
+    border-bottom: solid 1px black;
+}
+
+.date,
+.reportor {
+    border-right: black solid 1px;
+    padding-top: 20px;
+}
+
+.department,
+.contamination,
+.type {
+    padding-top: 20px;
+}
+
+.injury,
+.material_loss {
+    border-right: black solid 1px;
+    padding-top: 20px;
+}
+
+
+.action_plan {
+    padding-top: 50px;
+}
+
+button {
+    margin: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.rirsActioPlan {
+    margin-top: 3px;
+}

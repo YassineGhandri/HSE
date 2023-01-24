@@ -32,14 +32,14 @@ export class PermitWorkDetailsComponent implements OnInit {
   }
 
   validPW() {
-    this.permitWork.status = 'Valid';
+    
     const id=this.returnId();   
     this.permitWorkService.putPW(this.permitWork, Number(id)).subscribe((res) => {
       console.log('update');
     });
   }
   rejectPW() {
-    this.permitWork.status = 'Reject';
+   
     const id=this.returnId();
     this.permitWorkService.deletePW(Number(id)).subscribe((res) => {
       console.log('update');

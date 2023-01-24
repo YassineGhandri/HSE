@@ -1,25 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from '../sessions/auth.guard';
+
 import { PagesComponent } from './pages.component';
 
 const routes: Routes = [
   {
     path: '',
     component: PagesComponent,
+  
     children: [
       {
         path: '',
+       
         loadChildren: () =>
           import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
       },
-
-      {
-        path: '',
-        loadChildren: () =>
-          import('./action-plan/action-plan.module').then(
-            (m) => m.ActionPlanModule
-          ),
-      },
+      
       {
         path: '',
         loadChildren: () =>
@@ -31,6 +28,11 @@ const routes: Routes = [
         path: '',
         loadChildren: () =>
           import('./employee/employee.module').then((m) => m.EmployeeModule),
+      },
+      {
+        path: '',
+        loadChildren: () =>
+          import('./department/department.module').then((m) => m.DepartmentModule),
       },
       {
         path: '',
@@ -59,8 +61,15 @@ const routes: Routes = [
       {
         path: '',
         loadChildren: () =>
-          import('./operational-tools/operational-tools.module').then(
-            (m) => m.OperationalToolsModule
+          import('./rirs/rirs.module').then(
+            (m) => m.RIRSModule
+          ),
+      },
+      {
+        path: '',
+        loadChildren: () =>
+          import('./corrective-actions/corrective-actions.module').then(
+            (m) => m.CorrectiveActionsModule
           ),
       },
     ],

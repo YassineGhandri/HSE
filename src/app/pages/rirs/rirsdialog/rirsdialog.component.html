@@ -6,11 +6,12 @@
       <mat-label>Reference</mat-label>
       <input formControlName="reference" matInput placeholder="site" />
     </mat-form-field>
+
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Status</mat-label>
-      <input formControlName="status" matInput value="New" />
+      <input formControlName="status" matInput placeholder="New" />
     </mat-form-field>
-    
+
     <mat-form-field appearance="outline">
       <mat-label>date</mat-label>
       <input matInput [matDatepicker]="picker" formControlName="date" />
@@ -26,8 +27,12 @@
       </mat-select>
     </mat-form-field>
     <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>site</mat-label>
-      <input formControlName="site" matInput placeholder="site" />
+      <mat-label>Department</mat-label>
+      <mat-select formControlName="department" name="department">
+        <mat-option *ngFor="let department of departments" [value]="department.name">
+          {{ department.name }}
+        </mat-option>
+      </mat-select>
     </mat-form-field>
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>priority</mat-label>
@@ -42,6 +47,7 @@
       <mat-label>description</mat-label>
       <input formControlName="description" matInput placeholder="description" />
     </mat-form-field>
+
   </form>
 </div>
 <div mat-dialog-actions [align]="'end'">

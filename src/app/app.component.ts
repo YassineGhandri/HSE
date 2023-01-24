@@ -10,4 +10,7 @@ import { AuthService } from './sessions/auth.service';
 export class AppComponent {
   title = 'hse-test';
   constructor(public router: Router, public authService: AuthService) {}
+  logout(){
+    this.authService.logout();
+  }
 }

@@ -1,70 +1,75 @@
-<div class="main-content" style="margin: 20px">
-    <div class="container-fluid">
-        <div class="row mb-3">
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="card">
-                    <div class="card-header card-header-warning card-header-icon">
-                        <div class="card-icon d-flex">
-                            <i class="material-icons" style="color: red">content_copy </i>
-                            <p class="card-category">INCIDENTS</p>
-                        </div>
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row mb-3">
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="cards incidents">
+          <div class="card-header card-header-warning card-header-icon">
+            <div class="card-icon d-flex">
+              <svg style="width: 50px; height: 30px" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M2.5,19H21.5V21H2.5V19M9.68,13.27L14.03,14.43L19.34,15.85C20.14,16.06 20.96,15.59 21.18,14.79C21.39,14 20.92,13.17 20.12,12.95L14.81,11.53L12.05,2.5L10.12,2V10.28L5.15,8.95L4.22,6.63L2.77,6.24V11.41L4.37,11.84L9.68,13.27Z"
+                />
+              </svg>
+              <p class="card-category">INCIDENTS</p>
+            </div>
 
-                        <h1 class="card-title dangerIndice">
-                            {{ incidents.length }}
-                        </h1>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="card card-stats">
-                    <div class="card-header card-header-success card-header-icon">
-                        <div class="card-icon d-flex">
-                            <i class="material-icons">store</i>
-                            <p class="card-category">PERMIT WORK</p>
-                        </div>
-
-                        <h1 class="card-title bestIndice">
-                            {{ permitWorks.length }}
-                        </h1>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="card card-stats">
-                    <div class="card-header card-header-danger card-header-icon">
-                        <div class="card-icon d-flex">
-                            <i class="material-icons">info_outline</i>
-                            <p class="card-category">TRAININGS SESSIONS</p>
-                        </div>
-                        <h1 class="card-title bestIndice">
-                            {{ trainingSessions.length }}
-                        </h1>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-6 col-sm-6">
-                <div class="card card-stats">
-                    <div class="card-header card-header-info card-header-icon">
-                        <div class="card-icon d-flex">
-                            <i class="fa fa-twitter"></i>
-                            <p class="card-category">RIRS</p>
-                        </div>
-
-                        <h1 class="card-title bestIndice">{{ rirs.length }}</h1>
-                    </div>
-                </div>
-            </div>
+            <h1 class="card-title">
+              {{ incidents.length }}
+            </h1>
+          </div>
         </div>
-
-        <div class="row">
-            <div class="col-md-4">
-                <div id="chart">
-                    <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [xaxis]="chartOptions.xaxis"
-                        [dataLabels]="chartOptions.dataLabels" [grid]="chartOptions.grid" [stroke]="chartOptions.stroke"
-                        [title]="chartOptions.title">
-                    </apx-chart>
-                </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="cards openAction">
+          <div class="card-header card-header-success card-header-icon">
+            <div class="card-icon d-flex">
+              <i class="material-icons">store</i>
+              <p class="card-category">ACTION OPEN</p>
             </div>
+            <h1 class="card-title">
+              {{ correctiveActions.length }}
+            </h1>
+          </div>
         </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="cards TRAININGS_SESSIONS">
+          <div class="card-header card-header-danger card-header-icon">
+            <div class="card-icon d-flex">
+              <i class="material-icons">info_outline</i>
+              <p class="card-category">TRAININGS</p>
+            </div>
+            <h1 class="card-title">
+              {{ trainingSessions.length }}
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="cards closedAction">
+          <div class="card-header card-header-info card-header-icon">
+            <div class="card-icon d-flex">
+              <i class="fa fa-twitter"></i>
+              <p class="card-category">ACTION CLOSED</p>
+            </div>
+
+            <h1 class="card-title">{{ closedActions.length }}</h1>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="row mb-3 d-flex">
+      <div class="col-6">
+        <div class="card">
+          <div id="incidents"></div>
+        </div>
+      </div>
+      <div  class="col-6 department">
+        <div id="department"></div>
+        
+      </div>
+      
+    </div>
+  </div>
 </div>

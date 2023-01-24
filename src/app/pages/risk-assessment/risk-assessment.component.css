@@ -1,6 +1,8 @@
 .addbtn{
     margin-top: 10px;  
     margin-bottom: 10px;
+    background-color: rgb(107, 160, 240);
+      color: rgb(24, 22, 22);
   }
 
 .mat-form-field {

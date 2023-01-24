@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Incident } from '../../incident/incident';
 import { IncidentService } from '../../incident/incident.service';
-import { RIRS } from '../../operational-tools/rirs/rirs';
-import { RIRSService } from '../../operational-tools/rirs/rirs.service';
+import { RIRS } from '../../rirs/rirs';
+import { RIRSService } from '../../rirs/rirs.service';
 import { Employee } from '../employee';
 import { EmployeeService } from '../employee.service';
 

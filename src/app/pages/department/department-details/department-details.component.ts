@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Employee } from '../../employee/employee';
 import { EmployeeService } from '../../employee/employee.service';
 import { Department } from '../department';
 import { DepartmentService } from '../department.service';
@@ -12,6 +13,7 @@ import { DepartmentService } from '../department.service';
 export class DepartmentDetailsComponent implements OnInit {
 
   department!:Department;
+  employees!:Employee[]
   constructor(
     private route:ActivatedRoute,
     private departmentService:DepartmentService
@@ -22,6 +24,8 @@ export class DepartmentDetailsComponent implements OnInit {
     this.departmentService.getDepById(id).subscribe(
       (res)=>{
         this.department=res;
+        this.employees=this.department.employees
+        
       }
     )
 

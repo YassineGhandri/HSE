@@ -32,14 +32,15 @@ export class DepartmentDialogComponent implements OnInit {
 
     this.departmentForm=this.formBuilder.group({
                   code:['',Validators.required],
-                  name:['',Validators.required],
+                  name:['',Validators.required],   
+                  departmentHead:[],
+                  secondResponsible:[],
                   total_employee:['',Validators.required],
                   employees:['',Validators.required],                  
     });
     if(this.editData){
       this.Actionbtn='Update';
-      this.departmentForm.patchValue(this.editData);    
-      
+      this.departmentForm.patchValue(this.editData);        
     }
   }
   

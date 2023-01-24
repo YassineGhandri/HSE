@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Employee } from 'src/app/pages/employee/employee';
 import { EmployeeService } from 'src/app/pages/employee/employee.service';
+import { Department } from '../../department/department';
+import { DepartmentService } from '../../department/department.service';
 import { RIRSService } from '../rirs.service';
 
 @Component({
@@ -13,8 +15,9 @@ import { RIRSService } from '../rirs.service';
 export class RIRSDialogComponent implements OnInit {
   
   rirsForm!: FormGroup;
-  Actionbtn = 'Save';
+  Actionbtn = 'Save'; 
   employees:Employee[]=[];
+  departments:Department[]=[];
   constructor(
     private formBuilder: FormBuilder,
 
@@ -23,25 +26,32 @@ export class RIRSDialogComponent implements OnInit {
     private dialogRef: MatDialogRef<RIRSDialogComponent>,
     private rirsService: RIRSService,
     private employeeService:EmployeeService,
+    private departmentService:DepartmentService
   ) {}
 
   ngOnInit(): void {
     this.employeeService.getEmployee().subscribe({
       next:(res) => {
       this.employees = res;}});
+      this.departmentService.getDep().subscribe({
+        next: (res) => {
+          this.departments = res;
+        },
+      });
 
     this.rirsForm = this.formBuilder.group({
-      reference: ['', Validators.required],
-      status: ['', Validators.required],
+      status: 'New',
+      reference: ['', Validators.required],     
       date: ['', Validators.required],
-      site: ['', Validators.required],
+      department: ['', Validators.required],
       initiator: ['', Validators.required],
       priority: ['', Validators.required],
-      description: ['', Validators.required],
+      description: ['', Validators.required],      
     });
     if (this.editData) {
       this.Actionbtn = 'Update';
       this.rirsForm.patchValue(this.editData);
+      console.log('ngoninit');      
     }
   }
 
@@ -62,7 +72,8 @@ export class RIRSDialogComponent implements OnInit {
       this.updateRirs();
     }
   }
-  updateRirs() {
+  updateRirs() {   
+    
     this.rirsService.putRirs(this.rirsForm.value, this.editData.id).subscribe({
       next: (res) => {
         this.rirsForm.reset();
@@ -73,4 +84,4 @@ export class RIRSDialogComponent implements OnInit {
       },
     });
   }
-}
+  }

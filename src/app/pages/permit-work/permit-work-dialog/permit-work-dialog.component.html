@@ -1,15 +1,17 @@
-<h1>New Permit Work</h1>
+<h1>New Permit Work </h1>
 <div mat-dialog-content>
   <form [formGroup]="PWForm">
-    <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>Reference</mat-label>
-      <input formControlName="reference" matInput placeholder="reference" />
-    </mat-form-field>
-    <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>Status</mat-label>
-      <input formControlName="status" matInput value="New" />
-      </mat-form-field>
+    
       <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Reference</mat-label>
+      <input formControlName="reference" matInput placeholder="reference" *ngIf="sourceValue == 'New'" />
+      <mat-select formControlName="reference" name="reference" *ngIf="sourceValue == 'corrective_action'">
+        <mat-option *ngFor="let action of actions" [value]="action.referenceAction">
+          {{ action.referenceAction }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>type</mat-label>
       <mat-select formControlName="type" disableRipple>
         <mat-option value="hot">hot</mat-option>

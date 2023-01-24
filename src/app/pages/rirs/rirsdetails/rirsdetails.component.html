@@ -1,0 +1,51 @@
+<mat-card id="container" *ngIf="rirs">
+    <mat-card>
+        <div class="row referenceRIRS">
+            <div class="col-6 d-flex reference">
+                <div class="col-7">
+                    <h3>RIRS reference:</h3>
+                </div>
+                <div class="col">
+                    <h4>{{ rirs.reference }}</h4>
+                </div>
+            </div>
+
+            <div class="col-6 d-flex type">
+                <div class="col-7">
+                    <h3>RIRS priority:</h3>
+                </div>
+                <div class="col">
+                    <h4>{{ rirs.priority }}</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col d-flex reportor">
+                <div class="col-4">
+                    <h3>Initiator:</h3>
+                </div>
+                <div class="col">
+                    <h4>{{ rirs.initiator }}</h4>
+                </div>
+            </div>
+            <div class="col d-flex department">
+                <div class="col-4">
+                    <h3>Department:</h3>
+                </div>
+                <div class="col">
+                    <h4>{{ rirs.department }}</h4>
+                </div>
+            </div>
+        </div>
+        <div class="row description">
+            <h3>Rirs Description:</h3>
+            <h4>{{ rirs.description }}</h4>
+        </div>
+        <div class="d-flex justify-content-center mt-2">
+            <button mat-flat-button color="primary">Print
+            </button>
+            <button mat-flat-button color="warn" [routerLink]="['../../../pages/rirs']">Back</button>
+        </div>
+    </mat-card>
+</mat-card>

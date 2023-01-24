@@ -4,6 +4,7 @@ import { IncidentComponent } from "./incident.component";
 export interface Incident {  
    
     reference:string;
+    status:string;
     date:Date;
     department:string;
     description:string;

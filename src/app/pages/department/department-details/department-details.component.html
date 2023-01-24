@@ -1,34 +1,59 @@
 <div id="container" *ngIf="department">
-    <div class="row referenceAP">
-        <div class="col-6 d-flex reference">
-            <div class="col-7">
-                <h3>Department reference:</h3>
-            </div>
-            <div class="col">
-                <h4>{{ department.name }}</h4>
-            </div>
-        </div>
+  <div class="row referenceAP">
+    <div class="col-6 d-flex reference">
+      <div class="col-7">
+        <h3>Department reference:</h3>
+      </div>
+      <div class="col">
+        <h4>{{ department.name }}</h4>
+      </div>
+    </div>
 
-        <div class="col-6 d-flex total">
-            <div class="col-7">
-                <h3>Total Employees:</h3>
-            </div>
-            <div class="col">
-                <h4>{{department.total_employee}}</h4>
-            </div>
-        </div>
+    <div class="col-6 d-flex total">
+      <div class="col-7">
+        <h3>Total Employees:</h3>
+      </div>
+      <div class="col">
+        <h4>{{ department.total_employee }}</h4>
+      </div>
     </div>
-    <div class="row diagram">
-        <div>
+  </div>
+  <div class="row referenceAP">
+    <div class="col-6 d-flex reference">
+      <div class="col-7">
+        <h3>Department Head:</h3>
+      </div>
+      <div class="col">
+        <h4>{{ department.departmentHead }}</h4>
+      </div>
+    </div>
 
-        </div>
+    <div class="col-6 d-flex reference">
+      <div class="col-7">
+        <h3>Engineer/administrator:</h3>
+      </div>
+      <div class="col">
+        <h4>{{ department.secondResponsible }}</h4>
+      </div>
     </div>
-    <div class="d-flex justify-content-center mt-2">
-        <button mat-flat-button color="primary" style="margin-right: 10px">
-            <a [routerLink]="['/pages/incidents']">Back</a>
-        </button>
-        <button mat-flat-button color="warn" printSectionId="container" ngxPrint>
-            print
-        </button>
+  </div>
+  <div class="row diagram">
+    <div>
+      <ul>
+        <li *ngFor="let employee of employees">
+          
+            <h4>{{ employee }}</h4>
+         
+        </li>
+      </ul>
     </div>
+  </div>
+  <div class="d-flex justify-content-center mt-2">
+    <button mat-flat-button color="primary" style="margin-right: 10px">
+      <a [routerLink]="['/pages/incidents']">Back</a>
+    </button>
+    <button mat-flat-button color="warn" printSectionId="container" ngxPrint>
+      print
+    </button>
+  </div>
 </div>

@@ -1,38 +1,102 @@
-<!-- <h1>Action Plan</h1>
+<h1>Action Plan</h1>
 <div mat-dialog-content>
-    <form [formGroup]='APForm' >      
+  <form [formGroup]="APForm">
+    <div style="display: flex; justify-content: space-between">
       <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>reference</mat-label>
-        <mat-select formControlName='reference'  name="reference">
-          <mat-option *ngFor="let incident of incidents" [value]="incident.actionPlan">
-          {{incident.actionPlan}}
+        <mat-label>Source</mat-label>
+        <mat-select formControlName="source" name="source" [(value)]="sourceValue">
+          <mat-option value="RIRS">RIRS</mat-option>
+          <mat-option value="incident">Incident </mat-option>
+        </mat-select>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Source Ref</mat-label>
+          <mat-select formControlName="sourceRef" name="sourceRef" *ngIf="sourceValue == 'RIRS'">
+            <mat-option *ngFor="let rirs of rirs" [value]="rirs.reference">
+              {{ rirs.reference }}
+            </mat-option>
+          </mat-select>
+          <mat-select formControlName="sourceRef" name="sourceRef" *ngIf="sourceValue == 'incident'">
+            <mat-option *ngFor="let i of incidents" [value]="i.reference">
+              {{ i.reference }}
           </mat-option>
         </mat-select>
       </mat-form-field>
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>responsible</mat-label>
-            <mat-select formControlName='responsible'  name="employee">
-              <mat-option *ngFor="let employee of employees" [value]="employee.name">
-              {{employee.name}}
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>reference</mat-label>
+        <input formControlName="reference" matInput />
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Coordinator</mat-label>
+          <mat-select formControlName="responsible" name="employee">
+            <mat-option *ngFor="let employee of employees" [value]="employee.name">
+              {{ employee.name }}
               </mat-option>
-            </mat-select>
-          </mat-form-field>         
-            <mat-form-field class="example-full-width" appearance="fill" >
-              <mat-label>Corrective actions</mat-label>
-              <input formControlName='corrective_actions' matInput placeholder="corrective_actions">                        
+              </mat-select>
+              </mat-form-field>
+              </div>
+              
+              <div style="display: flex">
+                <button mat-raised-button color="primary" (click)="addNewAction()">
+                  Add Action
+                </button>
+              </div>
+              
+              <div formArrayName="corrective_actions" *ngFor="let action of corrective_actions.controls; let index = index">
+                <form [formGroupName]="index">
+                  <div style="display: flex; justify-content: space-between;">
+                    <mat-form-field class="example-full" appearance="fill">
+                      <mat-label>action reference </mat-label>
+                      <input formControlName="referenceAction" matInput placeholder="referenceAction" />
+                    </mat-form-field>
+                    <mat-form-field class="example-full" appearance="fill">
+                      <mat-label>action responsible</mat-label>
+                      <mat-select formControlName="departmentAction" name="department">
+                        <mat-option *ngFor="let department of departments" [value]="department.name">
+                          {{ department.name }}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+            <mat-form-field class="example-full" appearance="fill">
+              <mat-label>action progress</mat-label>
+              <input formControlName="progressAction" matInput />
             </mat-form-field>
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Progress</mat-label>
-            <input formControlName='progress' matInput placeholder="progress" >
-          </mat-form-field>          
-      </form>
-    </div>
-    <div mat-dialog-actions [align]="'end'">
-      <button mat-raised-button color="primary" (click)="addAP()" >{{Actionbtn}}</button>      
-      <button mat-raised-button color="warn" mat-dialog-close >Close</button>
-    </div>
-      
+          </div>
+          
+          <div>
+            <mat-form-field class="example-full-description">
+              <mat-label>action description</mat-label>
+              <input formControlName="descriptionAction" matInput />
+            </mat-form-field>
+          </div>
+          </form>
+          </div>
+          </form>
+          <div class="row correctiveActions">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">A.Reference</th>
+                  <th scope="col">A.Description</th>
+                  <th scope="col">A.Responsible</th>
+                  <th scope="col">A.Progress</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let action of actions">
+                  <th>{{ action.referenceAction }}</th>
+                  <td>{{ action.descriptionAction }}</td>
+                  <td>{{ action.departmentAction }}</td>
+                  <td>{{ action.progressAction }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
- -->
-
- action plan
+  <div mat-dialog-actions [align]="'end'">
+    <button mat-raised-button color="primary" (click)="addAP()">
+      {{ Actionbtn }}
+    </button>
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+    </div>
+  </div>

@@ -6,11 +6,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { MaterialModule } from 'src/app/material/material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RIRSdetailsComponent } from './rirsdetails/rirsdetails.component';
+import { RirsRoutingModule } from './rirs-routing.module';
+import { ActionPlanModule } from '../action-plan/action-plan.module';
 
-const routes:Routes=[
-  {path:'RIRS',component:RIRSComponent},
-  { path: 'RIRS/:id', component: RIRSdetailsComponent},
-]
+
 
 
 @NgModule({
@@ -23,7 +22,8 @@ const routes:Routes=[
     CommonModule,   
     MaterialModule,
     ReactiveFormsModule,
-    RouterModule.forChild(routes),
+    RirsRoutingModule,
+    ActionPlanModule
   ],
   exports:[RouterModule],
 })

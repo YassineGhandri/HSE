@@ -1,21 +1,24 @@
 .home-header {
-  background-image: url("https://www.occupationalhc.com/wp-content/uploads/2022/01/OHC-Blog-Images-Web.png");
-  background-size: 100%;
-  background-position: center;
-
+  background-image: url("../../../../src/assets/img/Construction-Safety.jpeg"),url("../../../../src/assets/img/oil-gas-bonds-unique.jpg");
+  background-size: 100%;  
+  background-repeat: no-repeat,no-repeat;
+  background-position: right bottom, left top;
+  background-position:center;
   padding-left: 70px;
 }
 
 .h1-header {
-  font-weight: 500;
+ line-height: 150%;
+  font-size: 250%;
   margin-bottom: 50px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 p {
   font-size: 1.1rem;
 }
 .citation {
   width: 40%;
-  color: rgb(219, 78, 97);
+  color: rgb(26, 56, 190);
 }
 .first-home {
   padding-top: 80px;
@@ -43,6 +46,7 @@ p {
   width: 30%; 
   margin-top: 30px;
   height: 250px;
+  background-color: white;
 }
 .card:hover{
   border:solid blue 2px;
@@ -51,4 +55,7 @@ p {
 .card-title{
   font-weight:500;
   margin-top: 10px;
+}
+.container-fluid{
+  background-color: #FAF9F8;
 }
